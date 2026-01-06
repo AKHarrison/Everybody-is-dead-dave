@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnlsoc4g6gaqn"]
+
+[ext_resource type="Texture2D" uid="uid://bciywplgdrd3h" path="res://Sprites/buffa.PNG" id="1_k2veh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_biq5p"]
+size = Vector2(19, 20)
+
+[node name="BuffaBin" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_biq5p")
+
+[node name="Buffa" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("1_k2veh")

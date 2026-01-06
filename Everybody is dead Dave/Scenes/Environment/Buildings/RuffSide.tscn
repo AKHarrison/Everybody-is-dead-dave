@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdjt6rcdb4dfi"]
+
+[ext_resource type="Texture2D" uid="uid://cnerbin6gvf6i" path="res://Sprites/Buildings side rough.png" id="1_fc280"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dl63a"]
+size = Vector2(49.6, 293.6)
+
+[node name="RuffSide" type="StaticBody2D"]
+scale = Vector2(1.25, 1.25)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 26.8)
+shape = SubResource("RectangleShape2D_dl63a")
+
+[node name="BuildingsSideRough" type="Sprite2D" parent="."]
+position = Vector2(-3.99998, -14.4)
+texture = ExtResource("1_fc280")
+
+[node name="BuildingsSideRough2" type="Sprite2D" parent="BuildingsSideRough"]
+position = Vector2(0.0499858, 12.7)
+scale = Vector2(1.00196, 1.00395)
+texture = ExtResource("1_fc280")

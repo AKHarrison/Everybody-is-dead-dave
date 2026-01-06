@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://0f4qqttfgmqj"]
+
+[ext_resource type="PackedScene" uid="uid://c530v30o431vv" path="res://Scenes/Game/Ground.tscn" id="1_1pr2j"]
+[ext_resource type="PackedScene" uid="uid://cxth7ibjroci6" path="res://Scenes/Player/player.tscn" id="1_ygwuu"]
+[ext_resource type="Script" path="res://Scripts/mob_spawn.gd" id="3_tol32"]
+
+[sub_resource type="Curve2D" id="Curve2D_8t4di"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 59, 15, 0, 0, 0, 0, 846, 21, 0, 0, 0, 0, 835, 513, 0, 0, 0, 0, 54, 511, 0, 0, 0, 0, 59, 15)
+}
+point_count = 5
+
+[node name="UTB" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ygwuu")]
+position = Vector2(255, 145)
+
+[node name="Ground" parent="." instance=ExtResource("1_1pr2j")]
+
+[node name="MobSpawn" type="Node2D" parent="."]
+script = ExtResource("3_tol32")
+
+[node name="SpawnPath" type="Path2D" parent="MobSpawn"]
+curve = SubResource("Curve2D_8t4di")
+
+[node name="North" type="PathFollow2D" parent="MobSpawn/SpawnPath"]
+unique_name_in_owner = true
+position = Vector2(477.435, 18.1901)
+rotation = 0.00762374
+progress = 418.446
+
+[node name="East" type="PathFollow2D" parent="MobSpawn/SpawnPath"]
+unique_name_in_owner = true
+position = Vector2(840.699, 258.088)
+rotation = 1.59315
+progress = 1024.17
+
+[node name="South" type="PathFollow2D" parent="MobSpawn/SpawnPath"]
+unique_name_in_owner = true
+position = Vector2(369.257, 511.807)
+rotation = -3.13903
+progress = 1744.89
+
+[node name="West" type="PathFollow2D" parent="MobSpawn/SpawnPath"]
+unique_name_in_owner = true
+position = Vector2(56.2997, 282.871)
+rotation = -1.56072
+progress = 2288.29
+
+[node name="Timer" type="Timer" parent="MobSpawn"]
+wait_time = 8.977
+autostart = true
+
+[connection signal="timeout" from="MobSpawn/Timer" to="MobSpawn" method="_on_timer_timeout"]

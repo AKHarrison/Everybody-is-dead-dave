@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://0f4qqttfgmqj"]
+
+[ext_resource type="PackedScene" uid="uid://c530v30o431vv" path="res://Scences/Ground.tscn" id="1_1pr2j"]
+[ext_resource type="PackedScene" uid="uid://cxth7ibjroci6" path="res://Scences/player.tscn" id="1_ygwuu"]
+[ext_resource type="PackedScene" uid="uid://dpai6w2g1stb4" path="res://Scences/mob_edna.tscn" id="3_bu55y"]
+
+[node name="UTB" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ygwuu")]
+position = Vector2(255, 145)
+
+[node name="Ground" parent="." instance=ExtResource("1_1pr2j")]
+
+[node name="CharacterBody2D" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_bu55y")]
+position = Vector2(79, 207)
+player = NodePath("../Player")
+
+[node name="CharacterBody2D2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_bu55y")]
+position = Vector2(339, 77)
+player = NodePath("../Player")
+
+[node name="CharacterBody2D3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_bu55y")]
+position = Vector2(419, 233)
+player = NodePath("../Player")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cisef30vd43pv"]
+
+[ext_resource type="Texture2D" uid="uid://b3nbmr6t2bqmq" path="res://Sprites/shelter.PNG" id="1_1r4a0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dihs"]
+size = Vector2(120, 92)
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8dihs")
+
+[node name="Img0157" type="Sprite2D" parent="."]
+modulate = Color(0.633757, 0.633757, 0.633757, 1)
+texture = ExtResource("1_1r4a0")

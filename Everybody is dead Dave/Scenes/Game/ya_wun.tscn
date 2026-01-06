@@ -1,0 +1,106 @@
+[gd_scene load_steps=10 format=3 uid="uid://ba7ur0kiehhr5"]
+
+[ext_resource type="Script" uid="uid://cmjf366vahtoj" path="res://Scenes/Game/ya_wun.gd" id="1_s02p1"]
+[ext_resource type="Theme" uid="uid://dsosd134e0n58" path="res://buttons.tres" id="1_y5c6d"]
+[ext_resource type="Script" uid="uid://pwwyh14c6fsv" path="res://Scenes/Game/restart_button.gd" id="2_cbeal"]
+[ext_resource type="Script" uid="uid://koxah6ss24ea" path="res://quit_button.gd" id="3_hj5xg"]
+[ext_resource type="FontFile" uid="uid://bv40sgqyl0ns6" path="res://Scenes/Fonts/atop-font/Atop-R99O3.ttf" id="5_0rqcx"]
+[ext_resource type="AudioStream" uid="uid://bbi131j1eui0d" path="res://Audio/ES_Back to Business - William Benckert.mp3" id="5_rx7dp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2lsq"]
+bg_color = Color(0.745935, 0.570802, 0.127801, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0rqcx"]
+font_size = 81
+
+[sub_resource type="LabelSettings" id="LabelSettings_ibrjo"]
+font = ExtResource("5_0rqcx")
+font_size = 41
+
+[node name="YaWun" type="Node2D"]
+texture_filter = 2
+script = ExtResource("1_s02p1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.8947, 16.2419)
+theme_override_styles/panel = SubResource("StyleBoxFlat_q2lsq")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -376.0
+offset_top = -77.0
+offset_right = 553.0
+offset_bottom = 194.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_y5c6d")
+theme_override_font_sizes/font_size = 107
+text = "winner, winner,
+ chicken dinner"
+label_settings = SubResource("LabelSettings_0rqcx")
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 495.0
+offset_top = 468.0
+offset_right = 626.0
+offset_bottom = 512.0
+theme = ExtResource("1_y5c6d")
+text = "Restart"
+script = ExtResource("2_cbeal")
+connected_scene = "utb"
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+offset_left = 495.0
+offset_top = 522.0
+offset_right = 626.0
+offset_bottom = 566.0
+theme = ExtResource("1_y5c6d")
+text = "Quit
+"
+script = ExtResource("3_hj5xg")
+
+[node name="Time" type="Label" parent="CanvasLayer"]
+offset_left = 184.0
+offset_top = 467.0
+offset_right = 423.0
+offset_bottom = 519.0
+text = "Time Taken"
+label_settings = SubResource("LabelSettings_ibrjo")
+
+[node name="Time2" type="Label" parent="CanvasLayer"]
+offset_left = 183.0
+offset_top = 523.0
+offset_right = 422.0
+offset_bottom = 575.0
+label_settings = SubResource("LabelSettings_ibrjo")
+horizontal_alignment = 1
+
+[node name="Saved" type="Label" parent="CanvasLayer"]
+offset_left = 655.0
+offset_top = 466.0
+offset_right = 1037.0
+offset_bottom = 518.0
+text = "Townsfolk Saved"
+label_settings = SubResource("LabelSettings_ibrjo")
+
+[node name="Saved2" type="Label" parent="CanvasLayer"]
+offset_left = 710.0
+offset_top = 529.0
+offset_right = 949.0
+offset_bottom = 581.0
+label_settings = SubResource("LabelSettings_ibrjo")
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_rx7dp")
+
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button2" method="_on_pressed"]

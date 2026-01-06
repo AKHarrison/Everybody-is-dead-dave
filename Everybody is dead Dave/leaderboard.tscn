@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhyxq6ykp8eef"]
+
+[ext_resource type="Script" uid="uid://utphoxp2gre2" path="res://leaderboard.gd" id="1_3ilyb"]
+[ext_resource type="Theme" uid="uid://3g0bw3fpax0x" path="res://menu.tres" id="2_2t7te"]
+
+[node name="Leaderboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3ilyb")
+
+[node name="LeaderboardContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("2_2t7te")

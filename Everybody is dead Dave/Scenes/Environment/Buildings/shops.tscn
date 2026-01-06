@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhfeih6agdo7f"]
+
+[ext_resource type="Texture2D" uid="uid://ciarkl8kaop44" path="res://Scenes/Mob/shop1.PNG" id="1_wtut6"]
+[ext_resource type="Texture2D" uid="uid://bi1axbya2i5d5" path="res://Scenes/Mob/shop2.PNG" id="2_tcbm0"]
+[ext_resource type="Texture2D" uid="uid://8jyi1i8iis12" path="res://Scenes/Mob/shop3.PNG" id="3_iivs8"]
+[ext_resource type="Texture2D" uid="uid://btd2p6gde5pm4" path="res://Scenes/Mob/shop4.PNG" id="4_jadas"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42ca0"]
+size = Vector2(961.188, 192.875)
+
+[node name="Shops" type="StaticBody2D"]
+position = Vector2(-349, -6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(347.406, 7.5625)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_42ca0")
+
+[node name="Shop1" type="Sprite2D" parent="."]
+position = Vector2(-54, 4)
+scale = Vector2(2, 2)
+texture = ExtResource("1_wtut6")
+
+[node name="Shop2" type="Sprite2D" parent="."]
+position = Vector2(428, 4)
+scale = Vector2(2, 2)
+texture = ExtResource("2_tcbm0")
+
+[node name="Shop3" type="Sprite2D" parent="."]
+position = Vector2(587, 2)
+scale = Vector2(2, 2)
+texture = ExtResource("3_iivs8")
+flip_h = true
+
+[node name="Shop4" type="Sprite2D" parent="."]
+position = Vector2(102, -2)
+scale = Vector2(2, 2)
+texture = ExtResource("4_jadas")
+
+[node name="Shop5" type="Sprite2D" parent="."]
+position = Vector2(264, -2)
+scale = Vector2(2, 2)
+texture = ExtResource("4_jadas")
+
+[node name="Shop6" type="Sprite2D" parent="."]
+position = Vector2(745, 4)
+scale = Vector2(2, 2)
+texture = ExtResource("1_wtut6")
+flip_h = true

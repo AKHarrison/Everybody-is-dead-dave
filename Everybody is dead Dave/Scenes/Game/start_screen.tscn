@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxqvc2ec20ou5"]
+
+[ext_resource type="Theme" uid="uid://3g0bw3fpax0x" path="res://menu.tres" id="1_oc76d"]
+[ext_resource type="Texture2D" uid="uid://b3nbmr6t2bqmq" path="res://Sprites/shelter.PNG" id="2_d5jh7"]
+[ext_resource type="Theme" uid="uid://dsosd134e0n58" path="res://buttons.tres" id="3_smb8r"]
+[ext_resource type="Script" path="res://Scenes/Game/restart_button.gd" id="4_yuphx"]
+[ext_resource type="Script" path="res://quit_button.gd" id="5_bsngg"]
+
+[node name="Start" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.8104, 16.276)
+theme = ExtResource("1_oc76d")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = -153.0
+offset_top = 9.0
+offset_right = 1239.0
+offset_bottom = 114.0
+theme = ExtResource("1_oc76d")
+text = "What a night?!?! You cant remember?...   
+Well you pissed off a small town with your antics last night.
+But Thats not all...."
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = -154.0
+offset_top = 115.0
+offset_right = 1238.0
+offset_bottom = 292.0
+theme = ExtResource("1_oc76d")
+theme_override_colors/font_color = Color(0.944281, 0.944281, 0.944281, 1)
+text = "Whats that beeping, you ask? 
+ You have been wired up to explode if any of the towns residents come near. 
+Keep them away, or the bomb will go off, 
+stop them chasing you by insulting them, 
+if you need them to get out of the way you'll have to say SORRY"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="CanvasLayer"]
+offset_left = 7.0
+offset_top = 322.0
+offset_right = 1399.0
+offset_bottom = 427.0
+theme = ExtResource("1_oc76d")
+text = "There is a bombshelter located behind the football pitches, 
+get to it! 
+You won't save yourself, but you will save the town"
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+offset_left = -424.0
+offset_top = 483.0
+offset_right = 968.0
+offset_bottom = 588.0
+theme = ExtResource("1_oc76d")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "To Move use the arrow keys
+To Insult press Z
+To Say sorry press X"
+horizontal_alignment = 1
+
+[node name="Shelter" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1004, 394)
+texture = ExtResource("2_d5jh7")
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 495.0
+offset_top = 510.0
+offset_right = 705.0
+offset_bottom = 576.0
+theme = ExtResource("3_smb8r")
+theme_override_font_sizes/font_size = 46
+text = "play"
+script = ExtResource("4_yuphx")
+connected_scene = "utb"
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+offset_left = 770.0
+offset_top = 512.0
+offset_right = 901.0
+offset_bottom = 578.0
+theme = ExtResource("3_smb8r")
+theme_override_font_sizes/font_size = 46
+text = "Quit
+"
+script = ExtResource("5_bsngg")
+
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button2" method="_on_pressed"]

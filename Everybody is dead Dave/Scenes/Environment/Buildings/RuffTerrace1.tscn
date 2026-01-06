@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqy0spmucen2i"]
+
+[ext_resource type="Texture2D" uid="uid://cry2adrpvme6s" path="res://Sprites/RuffTerr2.PNG" id="1_6ojc0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xtnyq"]
+size = Vector2(254, 107)
+
+[node name="RuffTerraceRed" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, -4.5)
+shape = SubResource("RectangleShape2D_xtnyq")
+
+[node name="RuffTerr2" type="Sprite2D" parent="."]
+position = Vector2(1.52588e-05, 1.52588e-05)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_6ojc0")

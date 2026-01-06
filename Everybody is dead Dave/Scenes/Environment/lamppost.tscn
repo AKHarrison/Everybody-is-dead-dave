@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://f1v44uvq7x0a"]
+
+[ext_resource type="Texture2D" uid="uid://cd3e3sfqnamt1" path="res://Sprites/lampost.PNG" id="1_n8507"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4d6v"]
+size = Vector2(4.5, 12)
+
+[node name="Lamppost" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.75, 15)
+shape = SubResource("RectangleShape2D_g4d6v")
+
+[node name="Lampost" type="Sprite2D" parent="."]
+position = Vector2(-32, -91)
+scale = Vector2(2, 2)
+texture = ExtResource("1_n8507")
+centered = false
+flip_h = true

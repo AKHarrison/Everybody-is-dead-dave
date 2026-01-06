@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuc3uw301n4v2"]
+
+[ext_resource type="Texture2D" uid="uid://l057ldj88k8v" path="res://Sprites/planter.PNG" id="1_06o86"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0both"]
+radius = 10.9995
+height = 52.0364
+
+[node name="side plant" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+rotation = 1.56107
+shape = SubResource("CapsuleShape2D_0both")
+
+[node name="Planter" type="Sprite2D" parent="."]
+position = Vector2(0, -5)
+texture = ExtResource("1_06o86")

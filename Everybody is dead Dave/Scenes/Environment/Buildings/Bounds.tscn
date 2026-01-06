@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://t4qgbg444b64"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2kdou"]
+a = Vector2(-33, 0)
+b = Vector2(3265, 3)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_e0m2c"]
+a = Vector2(3, 1807)
+
+[node name="WorldBounds" type="StaticBody2D"]
+position = Vector2(0, -2)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_2kdou")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(36, 1803)
+shape = SubResource("SegmentShape2D_2kdou")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_e0m2c")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(3290, 0)
+shape = SubResource("SegmentShape2D_e0m2c")

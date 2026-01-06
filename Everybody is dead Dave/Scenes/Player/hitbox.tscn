@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu6jtkt0melf5"]
+
+[ext_resource type="Script" path="res://Scripts/hitbox.gd" id="1_igrbu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n73mm"]
+radius = 22.0
+
+[node name="HitBox" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_igrbu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_n73mm")
+debug_color = Color(0.630274, 0.526199, 0.168186, 0.42)

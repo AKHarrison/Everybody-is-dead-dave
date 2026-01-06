@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://lbd43rig8hm5"]
+
+[ext_resource type="FontFile" uid="uid://bv40sgqyl0ns6" path="res://Scenes/Fonts/atop-font/Atop-R99O3.ttf" id="1_a7fu4"]
+
+[resource]
+Label/font_sizes/font_size = 74
+Label/fonts/font = ExtResource("1_a7fu4")

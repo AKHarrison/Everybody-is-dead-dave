@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://chax2rt7oshui"]
+
+[ext_resource type="Script" path="res://GUI/player_hud.gd" id="1_vu68d"]
+[ext_resource type="FontFile" uid="uid://cchjmdwuh3kfb" path="res://Scenes/Fonts/digital-7-font/Digital7Mono-Yz9J4.ttf" id="2_o2d8d"]
+[ext_resource type="AudioStream" uid="uid://cxspv1rho1aa" path="res://Sprites/beep.wav" id="3_7o6ps"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k0psc"]
+bg_color = Color(0.108721, 0.108721, 0.108721, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.381703, 0.381703, 0.381703, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="Theme" id="Theme_uu6x8"]
+Label/styles/normal = SubResource("StyleBoxFlat_k0psc")
+
+[sub_resource type="LabelSettings" id="LabelSettings_vo2lo"]
+font = ExtResource("2_o2d8d")
+font_size = 48
+font_color = Color(0.724721, 0, 0.0720562, 1)
+shadow_size = 7
+shadow_color = Color(1, 0.560784, 0.498039, 0.184314)
+shadow_offset = Vector2(0, 0)
+
+[node name="PlayerHud" type="CanvasLayer"]
+script = ExtResource("1_vu68d")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 43.0
+grow_horizontal = 2
+theme = SubResource("Theme_uu6x8")
+label_settings = SubResource("LabelSettings_vo2lo")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="audio" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="audio"]
+stream = ExtResource("3_7o6ps")
+pitch_scale = 0.48
+max_distance = 100000.0

@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxk6ong6taofj"]
+
+[ext_resource type="Script" path="res://numpty.gd" id="1_rtdnd"]
+[ext_resource type="Theme" uid="uid://lbd43rig8hm5" path="res://Sprites/insult.tres" id="2_pi63y"]
+[ext_resource type="AudioStream" uid="uid://ptr087wlsue6" path="res://Scenes/Player/Numpty.wav" id="3_sfhor"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2jq7x"]
+radius = 9.05539
+
+[node name="Numpty" type="Area2D"]
+top_level = true
+rotation = -0.0240587
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_rtdnd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 0.877515
+scale = Vector2(1.06711, 0.471918)
+shape = SubResource("CircleShape2D_2jq7x")
+debug_color = Color(0, 0.634569, 0.427503, 0.42)
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+texture_repeat = 1
+offset_left = -11.8522
+offset_top = -6.28694
+offset_right = 175.148
+offset_bottom = 81.7131
+scale = Vector2(0.135366, 0.142459)
+theme = ExtResource("2_pi63y")
+text = "NUMPTY"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_sfhor")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
