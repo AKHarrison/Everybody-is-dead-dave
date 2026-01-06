@@ -25,3 +25,5 @@ func display_leaderboard():
 		var label = Label.new()
 		label.text = "%d. Time: %s | Mobs: %d" % [i + 1, entry.time, entry.mobs]
 		leaderboard_container.add_child(label)
+
+#need to add feature to display seperate leaderboard for winning and losing
