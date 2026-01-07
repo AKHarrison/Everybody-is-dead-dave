@@ -9,7 +9,7 @@ var is_timing: bool = false
 func _ready() -> void:
 	start_timer()
 	add_child(timer)
-	timer.start(30)
+	timer.start(5)
 	timer.paused = true
 func _process(delta: float):
 	if is_timing:

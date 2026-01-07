@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cidfyu2ao3y5a"]
+
+[ext_resource type="Script" uid="uid://5dbsvb6vbtg3" path="res://leaderboard_win.gd" id="1_8vlu1"]
+[ext_resource type="Theme" uid="uid://bmjfj3yuhwm63" path="res://Scenes/Game/menu2.tres" id="2_dui24"]
+
+[node name="LeaderboardWin" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8vlu1")
+
+[node name="LeaderboardContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("2_dui24")

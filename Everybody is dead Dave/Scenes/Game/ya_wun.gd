@@ -19,3 +19,8 @@ func time_alive():
 func mobs_killed():
 	var mobs_killed = MobManager.total_mobs_spawned
 	saved_2.text = str(mobs_killed)
+	
+func save_run_to_leaderboard():
+	var time_survived = GlobalTimer.get_formatted_time()
+	var mobs_killed = MobManager.total_mobs_spawned
+	WinManager.add_leaderboard_entry(time_survived, mobs_killed)

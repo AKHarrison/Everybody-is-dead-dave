@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="UtheBomb (Redux) (Copy)"
+config/name="Everybody is dead Dave"
 run/main_scene="res://Scenes/Game/start_screen.tscn"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/image="res://UtheBomb.icon.png"
@@ -25,6 +25,7 @@ GlobalTimer="*res://Scripts/global_timer.gd"
 scene_manager="*res://Scripts/scene_manager.gd"
 new_scene_manager="res://Scenes/Game/new_scene_manager.tscn"
 MobManager="*res://Scripts/mob_manager.gd"
+WinManager="*res://Scenes/Game/win_manager.gd"
 
 [display]
 
