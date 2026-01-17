@@ -2,7 +2,7 @@ extends Node
 
 var total_mobs_spawned = 0
 
-const SAVE_FILE = "user://leaderboard.save"
+const SAVE_FILE = "user://leaderboard_win.save"
 var leaderboard_entries = []
 
 func add_leaderboard_entry(time: String, mobs: int):
@@ -19,7 +19,7 @@ func save_leaderboard():
 	if file:
 		file.store_var(leaderboard_entries)
 		file.close()
-		print("leaderboard saved!")
+		print("win leaderboard saved!")
 		
 func load_leaderboard():
 	if FileAccess.file_exists(SAVE_FILE):
@@ -29,7 +29,7 @@ func load_leaderboard():
 			file.close()
 			print("Leaderboard loaded: ", leaderboard_entries.size(), " entries")
 	else:
-		print("No save file found, starting fresh")
+		print("No win save file found, starting fresh")
 		
 func get_top_entries(count: int = 10):
 	# Sort by mobs killed (descending), then by time survived

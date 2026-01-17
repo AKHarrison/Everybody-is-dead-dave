@@ -10,6 +10,7 @@ func _ready() -> void:
 	GlobalTimer.timer.paused = true
 	time_alive()
 	mobs_killed()
+	save_run_to_leaderboard()
 	
 func time_alive():
 	GlobalTimer.stop_timer()
@@ -17,10 +18,10 @@ func time_alive():
 	print("Survived for: ", GlobalTimer.get_formatted_time())
 	
 func mobs_killed():
-	var mobs_killed = MobManager.total_mobs_spawned
-	saved_2.text = str(mobs_killed)
+	var mobs_killed2 = MobManager.total_mobs_spawned
+	saved_2.text = str(mobs_killed2)
 	
 func save_run_to_leaderboard():
 	var time_survived = GlobalTimer.get_formatted_time()
-	var mobs_killed = MobManager.total_mobs_spawned
-	WinManager.add_leaderboard_entry(time_survived, mobs_killed)
+	var mobs_killed1 = MobManager.total_mobs_spawned
+	WinManager.add_leaderboard_entry(time_survived, mobs_killed1)
