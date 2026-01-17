@@ -27,7 +27,7 @@ func load_leaderboard():
 		if file:
 			leaderboard_entries = file.get_var()
 			file.close()
-			print("Leaderboard loaded: ", leaderboard_entries.size(), " entries")
+			print("Win Leaderboard loaded: ", leaderboard_entries.size(), " entries")
 	else:
 		print("No win save file found, starting fresh")
 		
