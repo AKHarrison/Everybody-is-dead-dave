@@ -6,7 +6,7 @@ func _ready():
 	display_leaderboard()
 
 func display_leaderboard():
-	# clear existing entried
+	# clear existing entries
 	for child in leaderboard_container.get_children():
 		child.queue_free()
 		
@@ -25,5 +25,3 @@ func display_leaderboard():
 		var label = Label.new()
 		label.text = "%d. Townsfolk: %d | Time: %s" % [i + 1, entry.mobs, entry.time]
 		leaderboard_container.add_child(label)
-
-#need to add feature to display se

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://chax2rt7oshui"]
 
-[ext_resource type="Script" path="res://GUI/player_hud.gd" id="1_vu68d"]
+[ext_resource type="Script" uid="uid://cch3eb4uptrq" path="res://GUI/player_hud.gd" id="1_vu68d"]
 [ext_resource type="FontFile" uid="uid://cchjmdwuh3kfb" path="res://Scenes/Fonts/digital-7-font/Digital7Mono-Yz9J4.ttf" id="2_o2d8d"]
 [ext_resource type="AudioStream" uid="uid://cxspv1rho1aa" path="res://Sprites/beep.wav" id="3_7o6ps"]
 
