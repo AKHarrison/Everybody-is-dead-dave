@@ -3,8 +3,8 @@
 [ext_resource type="Theme" uid="uid://3g0bw3fpax0x" path="res://menu.tres" id="1_oc76d"]
 [ext_resource type="Texture2D" uid="uid://b3nbmr6t2bqmq" path="res://Sprites/shelter.PNG" id="2_d5jh7"]
 [ext_resource type="Theme" uid="uid://dsosd134e0n58" path="res://buttons.tres" id="3_smb8r"]
-[ext_resource type="Script" path="res://Scenes/Game/restart_button.gd" id="4_yuphx"]
-[ext_resource type="Script" path="res://quit_button.gd" id="5_bsngg"]
+[ext_resource type="Script" uid="uid://pwwyh14c6fsv" path="res://Scenes/Game/restart_button.gd" id="4_yuphx"]
+[ext_resource type="Script" uid="uid://koxah6ss24ea" path="res://quit_button.gd" id="5_bsngg"]
 
 [node name="Start" type="Control"]
 layout_mode = 3
@@ -91,7 +91,7 @@ offset_right = 901.0
 offset_bottom = 578.0
 theme = ExtResource("3_smb8r")
 theme_override_font_sizes/font_size = 46
-text = "Quit
+text = "Back to menu
 "
 script = ExtResource("5_bsngg")
 

@@ -64,12 +64,12 @@ script = ExtResource("2_cbeal")
 connected_scene = "utb"
 
 [node name="Button2" type="Button" parent="CanvasLayer"]
-offset_left = 495.0
-offset_top = 522.0
-offset_right = 626.0
-offset_bottom = 566.0
+offset_left = 479.0
+offset_top = 521.0
+offset_right = 647.0
+offset_bottom = 565.0
 theme = ExtResource("1_y5c6d")
-text = "Quit
+text = "main menu
 "
 script = ExtResource("3_hj5xg")
 

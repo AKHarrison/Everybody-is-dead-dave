@@ -69,12 +69,12 @@ script = ExtResource("3_jmgfy")
 
 [node name="Button2" type="Button" parent="Node2D"]
 texture_filter = 2
-offset_left = 503.0
-offset_top = 499.0
-offset_right = 634.0
-offset_bottom = 543.0
+offset_left = 487.0
+offset_top = 500.0
+offset_right = 655.0
+offset_bottom = 544.0
 theme = ExtResource("2_idncy")
-text = "QUIT"
+text = "Main Menu"
 script = ExtResource("5_oua0p")
 
 [node name="TimeAlive" type="Label" parent="Node2D"]

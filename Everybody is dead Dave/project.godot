@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Everybody is dead Dave"
-run/main_scene="res://Scenes/Game/start_screen.tscn"
+run/main_scene="uid://dgovnnt0kuuco"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/image="res://UtheBomb.icon.png"
 config/icon="res://Sprites/utb logo - Copy.png"

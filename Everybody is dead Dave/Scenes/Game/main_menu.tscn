@@ -1,0 +1,210 @@
+[gd_scene load_steps=10 format=3 uid="uid://dgovnnt0kuuco"]
+
+[ext_resource type="Script" uid="uid://cg7bx4db7y4h1" path="res://Scenes/Game/main_menu.gd" id="1_ovdel"]
+[ext_resource type="Theme" uid="uid://3g0bw3fpax0x" path="res://menu.tres" id="1_v6ya1"]
+[ext_resource type="Theme" uid="uid://dsosd134e0n58" path="res://buttons.tres" id="2_a33jk"]
+[ext_resource type="Texture2D" uid="uid://bf232jqmijt6f" path="res://Sprites/pointree.PNG" id="2_u7lnc"]
+[ext_resource type="PackedScene" uid="uid://cidfyu2ao3y5a" path="res://Scenes/Game/leaderboard_win.tscn" id="3_iql7g"]
+[ext_resource type="TileSet" uid="uid://dbdwsd5g1yk24" path="res://Scenes/pathandtrees.tres" id="3_ovdel"]
+[ext_resource type="PackedScene" uid="uid://bhyxq6ykp8eef" path="res://leaderboard.tscn" id="4_mwrvg"]
+[ext_resource type="PackedScene" uid="uid://dhfeih6agdo7f" path="res://Scenes/Environment/Buildings/shops.tscn" id="4_qxppq"]
+[ext_resource type="PackedScene" uid="uid://basvqvnjlvm7d" path="res://Scenes/Environment/Buildings/BlockBust.tscn" id="5_i64eu"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ovdel")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_v6ya1")
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer/Panel"]
+position = Vector2(47, 388)
+
+[node name="Pointree" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(-12, 2)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree2" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(287, 8)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree19" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(1057, 11)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree20" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(1105, 13)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree3" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(221, 3)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree4" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(158, 3)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree5" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(107, 4)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree6" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(46, 4)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree7" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(347.065, 5.8349915)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree8" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(646.065, 11.834991)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree9" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(580.065, 6.8349915)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree10" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(517.065, 6.8349915)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree11" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(466.065, 7.8349915)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree12" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(405.065, 7.8349915)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree13" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(705.065, 6.8349915)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree14" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(1004.065, 12.834991)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree15" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(938.065, 7.8349915)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree16" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(875.065, 7.8349915)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree17" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(824.065, 8.834991)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="Pointree18" type="Sprite2D" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(763.065, 8.834991)
+scale = Vector2(1.765, 1.765)
+texture = ExtResource("2_u7lnc")
+
+[node name="TileMap" type="TileMap" parent="CanvasLayer/Panel/Node2D"]
+position = Vector2(38, 212)
+tile_set = ExtResource("3_ovdel")
+format = 2
+layer_0/tile_data = PackedInt32Array(131066, 720896, 0, 131067, 786432, 0, 196602, 720896, 0, 196603, 786432, 0, 262138, 720896, 0, 262139, 786432, 0, 131068, 851968, 0, 131069, 786432, 0, 196604, 720896, 0, 196605, 786432, 0, 262140, 720896, 0, 262141, 851968, 0, 131070, 720896, 0, 131071, 786432, 0, 196606, 720896, 0, 196607, 786432, 0, 262142, 720896, 0, 262143, 786432, 0, 65536, 720896, 0, 65537, 851968, 0, 131072, 720896, 0, 131073, 786432, 0, 196608, 720896, 0, 196609, 851968, 0, 65538, 720896, 0, 65539, 786432, 0, 131074, 720896, 0, 131075, 786432, 0, 196610, 720896, 0, 196611, 786432, 0, 65540, 720896, 0, 65541, 786432, 0, 131076, 720896, 0, 131077, 786432, 0, 196612, 720896, 0, 196613, 786432, 0, 65542, 851968, 0, 65543, 786432, 0, 131078, 720896, 0, 131079, 786432, 0, 196614, 720896, 0, 196615, 786432, 0, 65544, 720896, 0, 65545, 786432, 0, 131080, 720896, 0, 131081, 786432, 0, 196616, 720896, 0, 196617, 851968, 0, 65546, 720896, 0, 65547, 786432, 0, 131082, 720896, 0, 131083, 786432, 0, 196618, 720896, 0, 196619, 786432, 0, 65548, 720896, 0, 65549, 786432, 0, 131084, 720896, 0, 131085, 786432, 0, 196620, 720896, 0, 196621, 786432, 0, 65550, 720896, 0, 65551, 786432, 0, 131086, 720896, 0, 131087, 786432, 0, 196622, 720896, 0, 196623, 786432, 0, 65552, 851968, 0, 65553, 851968, 0, 131088, 720896, 0, 131089, 786432, 0, 196624, 720896, 0, 196625, 786432, 0, 65554, 720896, 0, 65555, 851968, 0, 131090, 720896, 0, 131091, 851968, 0, 196626, 720896, 0, 196627, 786432, 0, 65556, 720896, 0, 65557, 786432, 0, 131092, 851968, 0, 131093, 786432, 0, 196628, 720896, 0, 196629, 786432, 0, 65558, 720896, 0, 65559, 786432, 0, 131094, 720896, 0, 131095, 786432, 0, 196630, 720896, 0, 196631, 786432, 0, 65560, 720896, 0, 65561, 851968, 0, 131096, 720896, 0, 131097, 786432, 0, 196632, 720896, 0, 196633, 786432, 0, 65562, 720896, 0, 65563, 786432, 0, 131098, 720896, 0, 131099, 786432, 0, 196634, 720896, 0, 196635, 786432, 0, 65564, 720896, 0, 65565, 786432, 0, 131100, 851968, 0, 131101, 786432, 0, 196636, 851968, 0, 196637, 786432, 0, 65566, 720896, 0, 65567, 786432, 0, 131102, 720896, 0, 131103, 786432, 0, 196638, 720896, 0, 196639, 786432, 0, 65568, 720896, 0, 65569, 786432, 0, 131104, 720896, 0, 131105, 786432, 0, 196640, 851968, 0, 196641, 786432, 0, 65570, 720896, 0, 65571, 786432, 0, 131106, 720896, 0, 131107, 786432, 0, 196642, 720896, 0, 196643, 786432, 0, 65572, 851968, 0, 65573, 786432, 0, 131108, 720896, 0, 131109, 786432, 0, 196644, 720896, 0, 196645, 786432, 0, 65574, 851968, 0, 65575, 786432, 0, 131110, 851968, 0, 131111, 786432, 0, 196646, 720896, 0, 196647, 786432, 0, 65576, 851968, 0, 65577, 786432, 0, 131112, 720896, 0, 131113, 786432, 0, 196648, 720896, 0, 196649, 786432, 0, 65578, 720896, 0, 65579, 786432, 0, 131114, 720896, 0, 131115, 786432, 0, 196650, 720896, 0, 196651, 786432, 0, 65580, 720896, 0, 65581, 786432, 0, 131116, 720896, 0, 131117, 786432, 0, 196652, 720896, 0, 196653, 786432, 0, 65582, 720896, 0, 65583, 786432, 0, 131118, 720896, 0, 131119, 786432, 0, 196654, 720896, 0, 196655, 786432, 0, 65584, 720896, 0, 65585, 786432, 0, 131120, 720896, 0, 131121, 851968, 0, 196656, 720896, 0, 196657, 851968, 0, 65586, 720896, 0, 65587, 786432, 0, 131122, 720896, 0, 131123, 786432, 0, 196658, 720896, 0, 196659, 786432, 0, 65588, 720896, 0, 65589, 786432, 0, 131124, 720896, 0, 131125, 786432, 0, 196660, 720896, 0, 196661, 851968, 0, 65590, 720896, 0, 65591, 786432, 0, 131126, 720896, 0, 131127, 786432, 0, 196662, 720896, 0, 196663, 786432, 0, 65592, 720896, 0, 65593, 786432, 0, 131128, 720896, 0, 131129, 786432, 0, 196664, 720896, 0, 196665, 786432, 0, 65594, 720896, 0, 65595, 851968, 0, 131130, 851968, 0, 131131, 786432, 0, 196666, 720896, 0, 196667, 786432, 0, 65596, 720896, 0, 65597, 786432, 0, 131132, 720896, 0, 131133, 786432, 0, 196668, 720896, 0, 196669, 786432, 0, 65598, 720896, 0, 65599, 786432, 0, 131134, 720896, 0, 131135, 851968, 0, 196670, 720896, 0, 196671, 786432, 0, 65600, 720896, 0, 65601, 786432, 0, 131136, 720896, 0, 131137, 786432, 0, 196672, 720896, 0, 196673, 786432, 0, 65602, 720896, 0, 65603, 786432, 0, 131138, 720896, 0, 131139, 786432, 0, 196674, 720896, 0, 196675, 851968, 0)
+
+[node name="Shops" parent="CanvasLayer/Panel/Node2D" instance=ExtResource("4_qxppq")]
+position = Vector2(65, 128)
+
+[node name="BlockBust" parent="CanvasLayer/Panel/Node2D" instance=ExtResource("5_i64eu")]
+position = Vector2(1018, 116)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.5
+offset_top = -144.0
+offset_right = 70.5
+offset_bottom = -3.9997864
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel/CenterContainer"]
+layout_mode = 2
+
+[node name="Tutorial" type="Button" parent="CanvasLayer/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_a33jk")
+text = "tutorial"
+
+[node name="Play" type="Button" parent="CanvasLayer/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_a33jk")
+text = "play"
+
+[node name="Options" type="Button" parent="CanvasLayer/Panel/CenterContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme = ExtResource("2_a33jk")
+text = "options"
+
+[node name="Quit" type="Button" parent="CanvasLayer/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_a33jk")
+text = "quit"
+
+[node name="LeaderboardWin" parent="CanvasLayer" instance=ExtResource("3_iql7g")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 39.0
+offset_top = 65.0
+offset_right = 39.0
+offset_bottom = 65.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Leaderboard" parent="CanvasLayer" instance=ExtResource("4_mwrvg")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = 113.0
+offset_top = 65.0
+offset_right = 113.0
+offset_bottom = 65.0
+grow_vertical = 1
+
+[connection signal="pressed" from="CanvasLayer/Panel/CenterContainer/VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/CenterContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
