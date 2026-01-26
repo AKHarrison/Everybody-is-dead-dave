@@ -14,7 +14,7 @@ func _ready():
 	pass
 
 	
-func _process(delta):
+func _process(_delta):
 	var input_x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	var input_y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	
@@ -28,7 +28,7 @@ func _process(delta):
 	else:
 		direction = Vector2.ZERO
 	
-func _physics_process(delta):	
+func _physics_process(_delta):	
 
 	move_and_slide()
 	

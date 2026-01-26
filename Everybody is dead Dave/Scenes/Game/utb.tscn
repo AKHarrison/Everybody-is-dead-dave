@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://0f4qqttfgmqj"]
+[gd_scene load_steps=47 format=4 uid="uid://0f4qqttfgmqj"]
 
 [ext_resource type="PackedScene" uid="uid://c530v30o431vv" path="res://Scenes/Environment/Ground.tscn" id="1_1pr2j"]
 [ext_resource type="Script" uid="uid://dhhnhcg5oxo6e" path="res://Scenes/Game/utb.gd" id="1_8d1gu"]
@@ -36,6 +36,8 @@
 [ext_resource type="PackedScene" uid="uid://dlg3tp61sdtpd" path="res://Scenes/Mob/mob_geordie.tscn" id="33_v2fsi"]
 [ext_resource type="AudioStream" uid="uid://dm787dyrda08y" path="res://Audio/ES_Loud Powerful Blast.wav" id="34_48cpk"]
 [ext_resource type="AudioStream" uid="uid://shkl2u3q5f5w" path="res://Audio/ES_Play Me Like That Video Game - Josef Bel Habib.mp3" id="35_m8agm"]
+[ext_resource type="PackedScene" uid="uid://vx02oux6gjxf" path="res://Scenes/Mob/mob_edna.tscn" id="37_l35x6"]
+[ext_resource type="PackedScene" uid="uid://bj2bcbotycywu" path="res://Scenes/Mob/mob_tache.tscn" id="38_hpfjd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ryti8"]
 texture = ExtResource("6_1kqqo")
@@ -283,7 +285,7 @@ tile_set = SubResource("TileSet_1pbpm")
 
 [node name="Player" parent="." instance=ExtResource("1_ygwuu")]
 unique_name_in_owner = true
-position = Vector2(2060, 1622)
+position = Vector2(1817, 261)
 collision_layer = 9
 
 [node name="Fog" type="Sprite2D" parent="."]
@@ -1037,7 +1039,7 @@ y_sort_enabled = true
 script = ExtResource("32_gl58n")
 
 [node name="Timer" type="Timer" parent="MobSpawn"]
-wait_time = 1.5
+wait_time = 0.557
 autostart = true
 
 [node name="West" type="Marker2D" parent="MobSpawn"]
@@ -1167,5 +1169,32 @@ connected_scene = "ya_wun"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger2"]
 position = Vector2(-0.690775, 16.7453)
 shape = SubResource("RectangleShape2D_xfnpv")
+
+[node name="MobEdna" parent="." instance=ExtResource("37_l35x6")]
+position = Vector2(1606, 404)
+
+[node name="MobEdna2" parent="." instance=ExtResource("37_l35x6")]
+position = Vector2(1784, 471)
+
+[node name="MobGran" parent="." instance=ExtResource("32_fvpcf")]
+position = Vector2(1587, 239)
+
+[node name="MobGran2" parent="." instance=ExtResource("32_fvpcf")]
+position = Vector2(1828, 315)
+
+[node name="MobTache" parent="." instance=ExtResource("38_hpfjd")]
+position = Vector2(1678, 408)
+
+[node name="MobTache2" parent="." instance=ExtResource("38_hpfjd")]
+position = Vector2(1879, 589)
+
+[node name="MobGran3" parent="." instance=ExtResource("32_fvpcf")]
+position = Vector2(1675, 555)
+
+[node name="MobGran4" parent="." instance=ExtResource("32_fvpcf")]
+position = Vector2(1729, 282)
+
+[node name="MobEdna3" parent="." instance=ExtResource("37_l35x6")]
+position = Vector2(1827, 447)
 
 [connection signal="timeout" from="MobSpawn/Timer" to="MobSpawn" method="_on_timer_timeout"]
