@@ -285,7 +285,7 @@ tile_set = SubResource("TileSet_1pbpm")
 
 [node name="Player" parent="." instance=ExtResource("1_ygwuu")]
 unique_name_in_owner = true
-position = Vector2(2374, 540)
+position = Vector2(1817, 261)
 collision_layer = 9
 
 [node name="Fog" type="Sprite2D" parent="."]
