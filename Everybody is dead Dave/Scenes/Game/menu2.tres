@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bmjfj3yuhwm63"]
+
+[ext_resource type="FontFile" uid="uid://bv40sgqyl0ns6" path="res://Scenes/Fonts/atop-font/Atop-R99O3.ttf" id="1_ke8bt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2o567"]
+bg_color = Color(0.123258, 0.605524, 0.808265, 1)
+
+[resource]
+Label/colors/font_color = Color(0.97104186, 0.946691, 1, 1)
+Label/font_sizes/font_size = 26
+Label/fonts/font = ExtResource("1_ke8bt")
+Label/styles/normal = null
+Panel/styles/panel = SubResource("StyleBoxFlat_2o567")

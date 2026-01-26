@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ba7ur0kiehhr5"]
+[gd_scene load_steps=11 format=3 uid="uid://ba7ur0kiehhr5"]
 
 [ext_resource type="Script" uid="uid://cmjf366vahtoj" path="res://Scenes/Game/ya_wun.gd" id="1_s02p1"]
 [ext_resource type="Theme" uid="uid://dsosd134e0n58" path="res://buttons.tres" id="1_y5c6d"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://koxah6ss24ea" path="res://quit_button.gd" id="3_hj5xg"]
 [ext_resource type="FontFile" uid="uid://bv40sgqyl0ns6" path="res://Scenes/Fonts/atop-font/Atop-R99O3.ttf" id="5_0rqcx"]
 [ext_resource type="AudioStream" uid="uid://bbi131j1eui0d" path="res://Audio/ES_Back to Business - William Benckert.mp3" id="5_rx7dp"]
+[ext_resource type="PackedScene" uid="uid://cidfyu2ao3y5a" path="res://Scenes/Game/leaderboard_win.tscn" id="6_ibrjo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2lsq"]
 bg_color = Color(0.745935, 0.570802, 0.127801, 1)
@@ -18,7 +19,6 @@ font = ExtResource("5_0rqcx")
 font_size = 41
 
 [node name="YaWun" type="Node2D"]
-texture_filter = 2
 script = ExtResource("1_s02p1")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -28,6 +28,12 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(28.8947, 16.2419)
 theme_override_styles/panel = SubResource("StyleBoxFlat_q2lsq")
+
+[node name="LeaderboardWin" parent="CanvasLayer" instance=ExtResource("6_ibrjo")]
+offset_left = 339.0
+offset_top = 31.0
+offset_right = 339.0
+offset_bottom = 31.0
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 anchors_preset = 8

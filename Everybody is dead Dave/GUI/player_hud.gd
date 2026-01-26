@@ -18,11 +18,11 @@ func time_left_to_live():
 	
 func _process(delta: float) -> void:
 	label.text = "%02d:%02d" % time_left_to_live()
-	beep()
+	#beep()
 	
-func beep():
-	if not GlobalTimer.timer.paused:
-		var now = Time.get_ticks_msec()
-		if now - last_beep_time >= 1000:
-			audio.play()
-			last_beep_time = now
+#func beep():
+	#if not GlobalTimer.timer.paused:
+		#var now = Time.get_ticks_msec()
+		#if now - last_beep_time >= 1000:
+			#audio.play()
+			#last_beep_time = now
