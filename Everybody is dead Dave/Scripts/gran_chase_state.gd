@@ -28,8 +28,8 @@ func player_lost():
 	
 func _enter_state() -> void:
 	set_physics_process(true)
-	if animator.current_animation != "gran_move":
-		animator.play("gran_move")
+	#if animator.current_animation != "gran_move":
+		#animator.play("gran_move")
 
 	
 func _exit_state() -> void:

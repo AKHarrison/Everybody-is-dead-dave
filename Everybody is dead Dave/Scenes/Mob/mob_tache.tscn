@@ -184,7 +184,6 @@ _data = {
 
 [node name="MobTache" type="CharacterBody2D"]
 y_sort_enabled = true
-position = Vector2(0, -6)
 collision_layer = 7
 motion_mode = 1
 script = ExtResource("1_nadxu")

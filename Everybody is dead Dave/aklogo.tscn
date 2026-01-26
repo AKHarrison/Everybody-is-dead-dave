@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfujmitfm41cj"]
+
+[ext_resource type="Texture2D" uid="uid://cd7t8chrue5yw" path="res://Scenes/Mob/Screenshot 2026-01-24 230602.png" id="1_eoqq2"]
+[ext_resource type="FontFile" uid="uid://bv40sgqyl0ns6" path="res://Scenes/Fonts/atop-font/Atop-R99O3.ttf" id="2_81m62"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i7soj"]
+font = ExtResource("2_81m62")
+font_size = 551
+outline_size = 10
+outline_color = Color(0.51479536, 0.25745612, 0.7944649, 1)
+shadow_size = 45
+shadow_color = Color(0.3137255, 0.16078432, 0.5294118, 0.14117648)
+shadow_offset = Vector2(5.505, 5.42)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Screenshot20260124230602" type="Sprite2D" parent="."]
+position = Vector2(1918, 740)
+texture = ExtResource("1_eoqq2")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1332.0
+offset_top = 396.0
+offset_right = 2507.0
+offset_bottom = 1082.0
+text = "AK"
+label_settings = SubResource("LabelSettings_i7soj")
+
+[node name="Label2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 1176.9999
+offset_top = 4.0
+offset_right = 1567.9999
+offset_bottom = 690.0
+scale = Vector2(-1.000004, 0.9984462)
+text = "A"
+label_settings = SubResource("LabelSettings_i7soj")

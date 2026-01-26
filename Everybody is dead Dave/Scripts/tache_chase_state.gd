@@ -35,7 +35,7 @@ func _exit_state() -> void:
 	set_physics_process(false)
 	
 	
-func _physics_process(delta) -> void:
+func _physics_process(_delta) -> void:
 	if is_instance_valid(player) and player.is_inside_tree():
 		navigation_agent.target_position = player.global_position
 		var next_position = navigation_agent.get_next_path_position()
