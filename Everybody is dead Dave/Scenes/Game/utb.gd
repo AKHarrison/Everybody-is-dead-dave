@@ -49,7 +49,6 @@ func _on_timer_timeout():
 	#explosion.play()
 	#explosion.finished.connect(_on_explosion_finished)  # Connect the signal using new syntax
 
-
 #
 #func _on_explosion_finished():
 	#get_tree().change_scene_to_file("res://game_over.tscn")

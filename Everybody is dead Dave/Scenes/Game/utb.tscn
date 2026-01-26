@@ -1,9 +1,10 @@
-[gd_scene load_steps=47 format=4 uid="uid://0f4qqttfgmqj"]
+[gd_scene load_steps=48 format=4 uid="uid://0f4qqttfgmqj"]
 
 [ext_resource type="PackedScene" uid="uid://c530v30o431vv" path="res://Scenes/Environment/Ground.tscn" id="1_1pr2j"]
 [ext_resource type="Script" uid="uid://dhhnhcg5oxo6e" path="res://Scenes/Game/utb.gd" id="1_8d1gu"]
 [ext_resource type="PackedScene" uid="uid://cxth7ibjroci6" path="res://Scenes/Player/player.tscn" id="1_ygwuu"]
 [ext_resource type="PackedScene" uid="uid://chax2rt7oshui" path="res://GUI/player_hud.tscn" id="2_3f5am"]
+[ext_resource type="PackedScene" uid="uid://f3porybix481" path="res://Scenes/Game/pause_menu.tscn" id="3_hpfjd"]
 [ext_resource type="TileSet" uid="uid://dbdwsd5g1yk24" path="res://Scenes/pathandtrees.tres" id="4_a4jc8"]
 [ext_resource type="Texture2D" uid="uid://c6q5sfndt1mcm" path="res://Sprites/Light.png" id="5_2t4o7"]
 [ext_resource type="TileSet" uid="uid://mf358vpi4enp" path="res://Roads.tres" id="5_stl1o"]
@@ -263,6 +264,8 @@ texture_filter = 1
 script = ExtResource("1_8d1gu")
 
 [node name="PlayerHud" parent="." instance=ExtResource("2_3f5am")]
+
+[node name="Pause Menu" parent="." instance=ExtResource("3_hpfjd")]
 
 [node name="TileMaps" type="Node2D" parent="."]
 y_sort_enabled = true
