@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxqvc2ec20ou5"]
+[gd_scene load_steps=5 format=3 uid="uid://bxqvc2ec20ou5"]
 
 [ext_resource type="Theme" uid="uid://3g0bw3fpax0x" path="res://menu.tres" id="1_oc76d"]
 [ext_resource type="Texture2D" uid="uid://b3nbmr6t2bqmq" path="res://Sprites/shelter.PNG" id="2_d5jh7"]
-[ext_resource type="Theme" uid="uid://dsosd134e0n58" path="res://buttons.tres" id="3_smb8r"]
 [ext_resource type="Script" uid="uid://pwwyh14c6fsv" path="res://Scenes/Game/restart_button.gd" id="4_yuphx"]
 [ext_resource type="Script" uid="uid://koxah6ss24ea" path="res://quit_button.gd" id="5_bsngg"]
 
@@ -78,7 +77,7 @@ offset_left = 495.0
 offset_top = 510.0
 offset_right = 705.0
 offset_bottom = 576.0
-theme = ExtResource("3_smb8r")
+theme = ExtResource("1_oc76d")
 theme_override_font_sizes/font_size = 46
 text = "play"
 script = ExtResource("4_yuphx")
@@ -89,7 +88,7 @@ offset_left = 770.0
 offset_top = 512.0
 offset_right = 901.0
 offset_bottom = 578.0
-theme = ExtResource("3_smb8r")
+theme = ExtResource("1_oc76d")
 theme_override_font_sizes/font_size = 46
 text = "Back to menu
 "

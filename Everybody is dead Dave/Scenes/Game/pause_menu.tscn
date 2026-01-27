@@ -7,19 +7,22 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_yx66o"]
 font = ExtResource("4_hjot1")
-font_size = 46
+font_size = 72
 font_color = Color(1, 1, 0.15686275, 1)
+outline_size = 4
+shadow_size = 0
 
 [node name="Pause Menu" type="CanvasLayer"]
 script = ExtResource("1_4i4kx")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-modulate = Color(1, 1, 1, 0.16078432)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Label" type="Label" parent="."]
+offset_left = 433.5
+offset_top = 170.0
+offset_right = 718.5
+offset_bottom = 261.0
+text = "paused"
+label_settings = SubResource("LabelSettings_yx66o")
+horizontal_alignment = 1
 
 [node name="PanelContainer" type="CenterContainer" parent="."]
 anchors_preset = 8
@@ -27,10 +30,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -84.0
-offset_top = -46.0
-offset_right = 84.0
-offset_bottom = 46.0
+offset_left = -108.5
+offset_top = -66.0
+offset_right = 108.5
+offset_bottom = 66.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_rai2o")
@@ -40,20 +43,24 @@ layout_mode = 2
 theme = ExtResource("1_wb652")
 alignment = 1
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-text = "paused"
-label_settings = SubResource("LabelSettings_yx66o")
-
 [node name="Resume" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_wb652")
+theme = ExtResource("1_rai2o")
 text = "Resume"
 
 [node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_wb652")
+theme = ExtResource("1_rai2o")
 text = "Main Menu"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0.16078432)
+offset_left = 575.5
+offset_top = 324.0
+offset_right = 575.5
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -1,13 +1,24 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://3g0bw3fpax0x"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://3g0bw3fpax0x"]
 
 [ext_resource type="FontFile" uid="uid://bv40sgqyl0ns6" path="res://Scenes/Fonts/atop-font/Atop-R99O3.ttf" id="1_7182y"]
+[ext_resource type="StyleBox" uid="uid://dus4v47qyi8j0" path="res://menu button focus.tres" id="2_5sodv"]
+[ext_resource type="StyleBox" uid="uid://cx572v0ya27j0" path="res://menu button.tres" id="2_77h70"]
+[ext_resource type="StyleBox" uid="uid://bha17u0tq47fh" path="res://menu hover button .tres" id="3_6gbjh"]
+[ext_resource type="StyleBox" uid="uid://blyw03b21esxt" path="res://menu button pressed.tres" id="3_hlhde"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2o567"]
 bg_color = Color(0.123258, 0.605524, 0.808265, 1)
 
 [resource]
+Button/font_sizes/font_size = 35
+Button/fonts/font = ExtResource("1_7182y")
+Button/styles/focus = ExtResource("2_5sodv")
+Button/styles/hover = ExtResource("3_6gbjh")
+Button/styles/normal = ExtResource("2_77h70")
+Button/styles/pressed = ExtResource("3_hlhde")
 Label/colors/font_color = Color(1, 1, 0.039215688, 1)
 Label/font_sizes/font_size = 26
 Label/fonts/font = ExtResource("1_7182y")
 Label/styles/normal = null
 Panel/styles/panel = SubResource("StyleBoxFlat_2o567")
+VBoxContainer/constants/separation = 10

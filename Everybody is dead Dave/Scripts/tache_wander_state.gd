@@ -37,4 +37,4 @@ func _physics_process(delta):
 		var distance = actor.global_position.distance_to(player.global_position)
 		if distance <= detection_range:
 			found_player.emit()
-			print("found player")
+		
