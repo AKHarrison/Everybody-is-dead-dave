@@ -20,6 +20,8 @@ func _enter_state():
 
 func _exit_state():
 	set_physics_process(false)
+	if animator:
+		animator.stop()
 
 func _physics_process(delta):
 	# Normalize direction and apply low_speed
