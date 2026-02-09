@@ -28,6 +28,16 @@ func set_idle():
 func send_home():
 	home = true
 
+func can_see_player() -> bool:
+	if not is_instance_valid(player) or not player.is_inside_tree():
+		return false
+	
+	# Update raycast to point at player (relative position)
+	ray_cast_2d.target_position = to_local(player.global_position)
+	ray_cast_2d.force_raycast_update()
+	
+	# Check if raycast hits the player specifically
+	return ray_cast_2d.is_colliding() and ray_cast_2d.get_collider() == player
 		
 func _physics_process(delta):
 	if is_instance_valid(player) and player.is_inside_tree():

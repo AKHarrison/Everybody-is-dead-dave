@@ -889,6 +889,7 @@ autoplay = "new_animation"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("23_nql3d")
 autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]

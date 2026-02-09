@@ -1,6 +1,6 @@
 class_name EdnaBase extends CharacterBody2D
 
-var max_speed: float = 90.0
+var max_speed: float = 50.0
 var low_speed: float = 20.0
 var	acceleration: float = 10.0
 var hit: bool = false
@@ -27,8 +27,18 @@ func set_idle():
 	
 func send_home():
 	home = true
-
+	
+func can_see_player() -> bool:
+	if not is_instance_valid(player) or not player.is_inside_tree():
+		return false
+	
+	# Update raycast to point at player (relative position)
+	ray_cast_2d.target_position = to_local(player.global_position)
+	ray_cast_2d.force_raycast_update()
+	
+	# Check if raycast hits the player specifically
+	return ray_cast_2d.is_colliding() and ray_cast_2d.get_collider() == player
 		
-func _physics_process(delta):
+func _physics_process(_delta):
 	if is_instance_valid(player) and player.is_inside_tree():
 		ray_cast_2d.target_position = ray_cast_2d.to_local(player.global_position)
