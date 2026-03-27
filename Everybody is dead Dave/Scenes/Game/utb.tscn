@@ -286,7 +286,7 @@ tile_set = SubResource("TileSet_1pbpm")
 
 [node name="Player" parent="." instance=ExtResource("1_ygwuu")]
 unique_name_in_owner = true
-position = Vector2(196, 217)
+position = Vector2(792, 1482)
 collision_layer = 9
 
 [node name="Fog" type="Sprite2D" parent="."]
@@ -1040,7 +1040,7 @@ y_sort_enabled = true
 script = ExtResource("32_gl58n")
 
 [node name="Timer" type="Timer" parent="MobSpawn"]
-wait_time = 0.557
+wait_time = 0.882
 autostart = true
 
 [node name="West" type="Marker2D" parent="MobSpawn"]
@@ -1124,25 +1124,25 @@ shape = SubResource("RectangleShape2D_xfnpv")
 position = Vector2(386, 323)
 
 [node name="MobGeordie" parent="." instance=ExtResource("33_v2fsi")]
-position = Vector2(1588, 524)
+position = Vector2(1535, 551)
 
 [node name="MobGeordie2" parent="." instance=ExtResource("33_v2fsi")]
 position = Vector2(1696, 740)
 
 [node name="MobGeordie3" parent="." instance=ExtResource("33_v2fsi")]
-position = Vector2(1709, 785)
+position = Vector2(1575, 240)
 
 [node name="MobGeordie4" parent="." instance=ExtResource("33_v2fsi")]
 position = Vector2(1419, 403)
 
 [node name="MobGeordie5" parent="." instance=ExtResource("33_v2fsi")]
-position = Vector2(1781, 440)
+position = Vector2(1840, 325)
 
 [node name="MobGeordie6" parent="." instance=ExtResource("33_v2fsi")]
-position = Vector2(1772, 514)
+position = Vector2(1139, 953)
 
 [node name="MobGeordie7" parent="." instance=ExtResource("33_v2fsi")]
-position = Vector2(1507, 654)
+position = Vector2(1531, 449)
 
 [node name="MobGeordie8" parent="." instance=ExtResource("33_v2fsi")]
 position = Vector2(1665, 371)

@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://ba7ur0kiehhr5"]
+[gd_scene load_steps=12 format=3 uid="uid://ba7ur0kiehhr5"]
 
 [ext_resource type="Script" uid="uid://cmjf366vahtoj" path="res://Scenes/Game/ya_wun.gd" id="1_s02p1"]
 [ext_resource type="Theme" uid="uid://dsosd134e0n58" path="res://buttons.tres" id="1_y5c6d"]
 [ext_resource type="Script" uid="uid://pwwyh14c6fsv" path="res://Scenes/Game/restart_button.gd" id="2_cbeal"]
 [ext_resource type="Script" uid="uid://koxah6ss24ea" path="res://quit_button.gd" id="3_hj5xg"]
 [ext_resource type="FontFile" uid="uid://bv40sgqyl0ns6" path="res://Scenes/Fonts/atop-font/Atop-R99O3.ttf" id="5_0rqcx"]
+[ext_resource type="Theme" uid="uid://3g0bw3fpax0x" path="res://menu.tres" id="5_nv7o5"]
 [ext_resource type="AudioStream" uid="uid://bbi131j1eui0d" path="res://Audio/ES_Back to Business - William Benckert.mp3" id="5_rx7dp"]
 [ext_resource type="PackedScene" uid="uid://cidfyu2ao3y5a" path="res://Scenes/Game/leaderboard_win.tscn" id="6_ibrjo"]
 
@@ -30,10 +31,10 @@ scale = Vector2(28.8947, 16.2419)
 theme_override_styles/panel = SubResource("StyleBoxFlat_q2lsq")
 
 [node name="LeaderboardWin" parent="CanvasLayer" instance=ExtResource("6_ibrjo")]
-offset_left = 339.0
-offset_top = 31.0
-offset_right = 339.0
-offset_bottom = 31.0
+offset_left = 340.0
+offset_top = 58.0
+offset_right = 340.0
+offset_bottom = 58.0
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 anchors_preset = 8
@@ -52,26 +53,6 @@ theme_override_font_sizes/font_size = 107
 text = "winner, winner,
 chicken dinner"
 label_settings = SubResource("LabelSettings_0rqcx")
-
-[node name="Button" type="Button" parent="CanvasLayer"]
-offset_left = 495.0
-offset_top = 468.0
-offset_right = 626.0
-offset_bottom = 512.0
-theme = ExtResource("1_y5c6d")
-text = "Restart"
-script = ExtResource("2_cbeal")
-connected_scene = "utb"
-
-[node name="Button2" type="Button" parent="CanvasLayer"]
-offset_left = 479.0
-offset_top = 521.0
-offset_right = 647.0
-offset_bottom = 565.0
-theme = ExtResource("1_y5c6d")
-text = "main menu
-"
-script = ExtResource("3_hj5xg")
 
 [node name="Time" type="Label" parent="CanvasLayer"]
 offset_left = 184.0
@@ -105,8 +86,28 @@ offset_bottom = 581.0
 label_settings = SubResource("LabelSettings_ibrjo")
 horizontal_alignment = 1
 
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 433.0
+offset_top = 526.0
+offset_right = 658.0
+offset_bottom = 624.0
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_nv7o5")
+text = "Restart"
+script = ExtResource("2_cbeal")
+connected_scene = "utb"
+
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_nv7o5")
+text = "main menu
+"
+script = ExtResource("3_hj5xg")
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_rx7dp")
 
-[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button2" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="CanvasLayer/VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button2" to="CanvasLayer/VBoxContainer/Button2" method="_on_pressed"]

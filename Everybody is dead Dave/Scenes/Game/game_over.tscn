@@ -58,6 +58,7 @@ offset_right = 357.0
 offset_bottom = 14.0
 
 [node name="Button" type="Button" parent="Node2D"]
+visible = false
 texture_filter = 2
 offset_left = 504.0
 offset_top = 447.0
@@ -68,6 +69,7 @@ text = "Restart"
 script = ExtResource("3_jmgfy")
 
 [node name="Button2" type="Button" parent="Node2D"]
+visible = false
 texture_filter = 2
 offset_left = 487.0
 offset_top = 500.0
