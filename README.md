@@ -86,7 +86,7 @@ Everybody is dead Dave/
 
 ## 🤝 Contributing
 
-This project uses **[Conventional Commits](https://www.conventionalcommits.org/)** — the release workflow reads commit messages to auto-bump the version and write the changelog.
+Howay then. This project uses **[Conventional Commits](https://www.conventionalcommits.org/)** — keep your commit messages proper-like and the release workflow will sort the versioning and changelog all by itself. Canny, like.
 
 ```
 feat: add new mob variant
