@@ -27,6 +27,7 @@ scene_manager="*res://Scripts/scene_manager.gd"
 new_scene_manager="res://Scenes/Game/new_scene_manager.tscn"
 MobManager="*res://Scripts/mob_manager.gd"
 WinManager="*res://Scenes/Game/win_manager.gd"
+HudManager="*res://GUI/hud_manager.tscn"
 
 [display]
 

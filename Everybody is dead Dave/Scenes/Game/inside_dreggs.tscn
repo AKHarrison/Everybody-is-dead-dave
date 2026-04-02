@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://8ghojgtqx657"]
 
 [ext_resource type="Texture2D" uid="uid://ckwyuk7kxlk4e" path="res://Sprites/dreggs.PNG" id="1_8flm5"]
-[ext_resource type="Script" path="res://Scripts/base_scene.gd" id="1_e2vvr"]
+[ext_resource type="Script" uid="uid://dh8s582n4k74x" path="res://Scripts/base_scene.gd" id="1_e2vvr"]
 [ext_resource type="PackedScene" uid="uid://ce2hfwlha2m5u" path="res://Scenes/Game/scene_trigger.tscn" id="3_famep"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsibq"]
@@ -83,13 +83,13 @@ tile_set = SubResource("TileSet_ug4yk")
 [node name="EntranceMarkers" type="Node2D" parent="."]
 
 [node name="any" type="Marker2D" parent="EntranceMarkers"]
-position = Vector2(546, 373)
+position = Vector2(531, 256)
 
 [node name="SceneTrigger" parent="EntranceMarkers" instance=ExtResource("3_famep")]
 position = Vector2(546, 383)
 collision_layer = 0
 collision_mask = 8
-connected_scene = "utb"
+connected_scene = "tutorial_forest"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EntranceMarkers/SceneTrigger"]
 position = Vector2(0, 10)

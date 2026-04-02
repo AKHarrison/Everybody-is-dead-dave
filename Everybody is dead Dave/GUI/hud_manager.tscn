@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://8vud41i0k3id"]
+
+[ext_resource type="PackedScene" uid="uid://chax2rt7oshui" path="res://GUI/player_hud.tscn" id="1_apes5"]
+[ext_resource type="PackedScene" uid="uid://f3porybix481" path="res://Scenes/Game/pause_menu.tscn" id="2_4mlsq"]
+
+[node name="Hud Manager" type="CanvasLayer"]
+
+[node name="PlayerHud" parent="." instance=ExtResource("1_apes5")]
+
+[node name="Pause Menu" parent="." instance=ExtResource("2_4mlsq")]
