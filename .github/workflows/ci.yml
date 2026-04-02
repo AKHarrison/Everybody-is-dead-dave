@@ -1,0 +1,87 @@
+name: CI — Dinnit Merge Broken Code 🔍
+
+# Runs on PRs targeting master (feature/* branches only by convention).
+# Existing main / New-Map branches are unaffected — this workflow
+# only triggers when someone opens a PR against the future master branch.
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  lint-and-validate:
+    name: 🕵️ Sniff Out Dodgy GDScript
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: 📥 Checkout the goods
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python (for gdtoolkit)
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 🔧 Install gdtoolkit (gdlint + gdformat)
+        run: |
+          pip install "gdtoolkit>=4.0.0,<5.0.0"
+          echo "gdlint version: $(gdlint --version 2>/dev/null || echo 'installed')"
+
+      - name: 🎨 Check GDScript formatting (non-destructive)
+        run: |
+          echo "Checking GDScript formatting..."
+          find "Everybody is dead Dave" -name "*.gd" -print0 | \
+            xargs -0 gdformat --check 2>&1 || \
+            (echo "⚠️  Some files need formatting — run 'gdformat <file>' locally to fix" && exit 1)
+
+      - name: 🔬 Lint all GDScript files
+        run: |
+          echo "Linting GDScript files..."
+          find "Everybody is dead Dave" -name "*.gd" -print0 | \
+            xargs -0 gdlint
+          echo "✅ All GDScript files passed lint"
+
+      - name: 🏗️ Validate scene file references
+        run: |
+          python3 << 'EOF'
+          import os
+          import re
+          import sys
+
+          game_root = "Everybody is dead Dave"
+          errors = []
+
+          # Find all .tscn files
+          tscn_files = []
+          for root, dirs, files in os.walk(game_root):
+              for f in files:
+                  if f.endswith(".tscn"):
+                      tscn_files.append(os.path.join(root, f))
+
+          print(f"🔍 Checking {len(tscn_files)} scene files...")
+
+          for tscn_path in tscn_files:
+              with open(tscn_path, "r", encoding="utf-8") as fh:
+                  content = fh.read()
+
+              # Extract all ext_resource path= entries
+              for match in re.finditer(r'ext_resource[^]]+path="res://([^"]+)"', content):
+                  res_path = match.group(1)
+                  abs_path = os.path.join(game_root, res_path)
+
+                  if not os.path.exists(abs_path):
+                      errors.append(
+                          f"  💀 {tscn_path}\n"
+                          f"      references missing: res://{res_path}"
+                      )
+
+          if errors:
+              print(f"\n❌ Found {len(errors)} broken scene reference(s):\n")
+              for e in errors:
+                  print(e)
+              sys.exit(1)
+          else:
+              print(f"✅ All scene references are valid — nowt broken, like")
+          EOF
