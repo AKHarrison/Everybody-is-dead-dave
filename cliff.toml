@@ -1,0 +1,68 @@
+# git-cliff configuration — https://git-cliff.org/docs/configuration
+# Drives auto-generated CHANGELOG.md via .github/workflows/release.yml.
+#
+# Conventional Commit types:
+#   feat      ✨  A new feature
+#   fix       🐛  A bug fix
+#   docs      📚  Documentation only changes
+#   ci        👷  CI/CD pipeline changes
+#   chore     🔧  Maintenance / housekeeping
+#   refactor  ♻️   A code change that neither fixes a bug nor adds a feature
+#   perf      ⚡  A change that improves performance
+#   test      🧪  Adding or correcting tests
+#   style     🎨  Formatting / whitespace (no logic changes)
+#   revert    ⏪  Reverts a previous commit
+#
+# Breaking changes: append `!` after type, e.g. `feat!: ...`
+# Release strategy: merge a conventional-commit branch into master — no manual steps.
+
+[changelog]
+header = """
+# 📋 Changelog
+
+All notable changes to this project are documented here.\
+ Entries are auto-generated from [Conventional Commits](https://www.conventionalcommits.org/) on every merge to `master`.
+
+"""
+body = """
+{% if version %}\
+## 🏷️ [{{ version | trim_start_matches(pat="v") }}] — {{ timestamp | date(format="%Y-%m-%d") }}
+{% else %}\
+## 🚧 [Unreleased]
+{% endif %}\
+{% for group, commits in commits | group_by(attribute="group") %}
+### {{ group }}
+{% for commit in commits %}\
+- {{ commit.message | upper_first }}\
+{% if commit.breaking %} ⚠️ **BREAKING CHANGE**{% endif %} \
+([`{{ commit.id | truncate(length=7, end="") }}`](https://github.com/AKHarrison/Everybody-is-dead-dave/commit/{{ commit.id }}))\
+{% endfor %}
+{% endfor %}\n
+"""
+footer = ""
+trim = true
+
+[git]
+conventional_commits = true
+filter_unconventional = true
+split_commits = false
+
+commit_parsers = [
+    { message = "^feat",     group = "✨ Features"      },
+    { message = "^fix",      group = "🐛 Bug Fixes"     },
+    { message = "^docs",     group = "📚 Documentation" },
+    { message = "^ci",       group = "👷 CI/CD"         },
+    { message = "^chore",    group = "🔧 Chores"        },
+    { message = "^refactor", group = "♻️ Refactors"     },
+    { message = "^perf",     group = "⚡ Performance"   },
+    { message = "^test",     group = "🧪 Tests"         },
+    { message = "^style",    group = "🎨 Styling"       },
+    { message = "^revert",   group = "⏪ Reverts"       },
+    { message = "^chore: update CHANGELOG", skip = true },
+]
+
+tag_pattern = "v[0-9]*"
+sort_commits = "newest"
+
+[bump]
+initial_tag = "v0.0.0"
