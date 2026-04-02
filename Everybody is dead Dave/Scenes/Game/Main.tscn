@@ -1,7 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://df6vl8p8405v4"]
+[gd_scene load_steps=3 format=3 uid="uid://df6vl8p8405v4"]
 
 [ext_resource type="PackedScene" uid="uid://0f4qqttfgmqj" path="res://Scenes/Game/utb.tscn" id="1_gaq6t"]
+[ext_resource type="PackedScene" uid="uid://8vud41i0k3id" path="res://GUI/hud_manager.tscn" id="2_dfwoq"]
 
 [node name="Main" type="Node"]
 
 [node name="UTB" parent="." instance=ExtResource("1_gaq6t")]
+
+[node name="Hud Manager" parent="." instance=ExtResource("2_dfwoq")]
