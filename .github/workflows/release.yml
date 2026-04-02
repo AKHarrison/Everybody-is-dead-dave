@@ -1,0 +1,109 @@
+name: Release — Ship It, Bonny Lad 🚀
+
+# Runs automatically whenever a commit lands on master (including PR merges).
+#
+# What this does on each run:
+#   1. Uses git-cliff to compute the next semantic version from conventional commits.
+#   2. If a new version is detected (no existing tag), generates/updates CHANGELOG.md,
+#      commits it back to master [skip ci], creates an annotated tag, pushes both.
+#   3. Publishes a GitHub Release with detailed release notes.
+#
+# Versioning follows Semantic Versioning driven by Conventional Commits:
+#   feat!  / BREAKING CHANGE  → major bump
+#   feat                       → minor bump
+#   fix / perf / refactor      → patch bump
+#
+# To release: merge a conventional-commit feature branch into master. That's it.
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    name: 🏷️ Tag & Publish Release
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: read
+      contents: write
+
+    steps:
+      - name: 📥 Checkout repository (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🔢 Compute next version with git-cliff
+        uses: orhun/git-cliff-action@v4
+        id: cliff-version
+        with:
+          config: cliff.toml
+          args: --bumped-version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPO: ${{ github.repository }}
+
+      - name: 🔍 Check if this version already has a tag
+        id: check
+        run: |
+          VERSION="$(echo "${{ steps.cliff-version.outputs.content }}" | tr -d '[:space:]')"
+          [[ "$VERSION" == v* ]] || VERSION="v${VERSION}"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          if git tag --list | grep -qx "$VERSION"; then
+            echo "new_release=false" >> $GITHUB_OUTPUT
+            echo "ℹ️  $VERSION already tagged — nowt to release, like"
+          else
+            echo "new_release=true" >> $GITHUB_OUTPUT
+            echo "🚀 Will create release $VERSION"
+          fi
+
+      - name: 📝 Generate release notes (unreleased commits only)
+        if: steps.check.outputs.new_release == 'true'
+        uses: orhun/git-cliff-action@v4
+        id: cliff-notes
+        with:
+          config: cliff.toml
+          args: --verbose --unreleased --bump --strip header
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPO: ${{ github.repository }}
+
+      - name: 📋 Update CHANGELOG.md (full history)
+        if: steps.check.outputs.new_release == 'true'
+        uses: orhun/git-cliff-action@v4
+        with:
+          config: cliff.toml
+          args: --verbose --bump --output CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPO: ${{ github.repository }}
+          OUTPUT: CHANGELOG.md
+
+      - name: 💾 Commit CHANGELOG.md, tag, and push
+        if: steps.check.outputs.new_release == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add CHANGELOG.md
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: update CHANGELOG.md [skip ci]"
+          fi
+
+          git tag -a "${{ steps.check.outputs.version }}" \
+            -m "Release ${{ steps.check.outputs.version }}"
+
+          git push
+          git push --tags
+
+      - name: 🎉 Publish GitHub Release
+        if: steps.check.outputs.new_release == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.check.outputs.version }}
+          name: "🚀 ${{ steps.check.outputs.version }}"
+          body: ${{ steps.cliff-notes.outputs.content }}
+          draft: false
+          prerelease: false
