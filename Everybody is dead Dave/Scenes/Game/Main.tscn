@@ -1,10 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://df6vl8p8405v4"]
+[gd_scene load_steps=5 format=3 uid="uid://df6vl8p8405v4"]
 
 [ext_resource type="PackedScene" uid="uid://0f4qqttfgmqj" path="res://Scenes/Game/utb.tscn" id="1_gaq6t"]
 [ext_resource type="PackedScene" uid="uid://8vud41i0k3id" path="res://GUI/hud_manager.tscn" id="2_dfwoq"]
+[ext_resource type="PackedScene" uid="uid://cjitmaij6ygjs" path="res://Scenes/Game/ruff_terrace.tscn" id="2_y4a8c"]
+[ext_resource type="PackedScene" uid="uid://cxth7ibjroci6" path="res://Scenes/Player/player.tscn" id="4_c6dyv"]
 
 [node name="Main" type="Node"]
 
 [node name="UTB" parent="." instance=ExtResource("1_gaq6t")]
 
+[node name="RuffTerrace" parent="." instance=ExtResource("2_y4a8c")]
+
 [node name="Hud Manager" parent="." instance=ExtResource("2_dfwoq")]
+
+[node name="Player" parent="." instance=ExtResource("4_c6dyv")]
+unique_name_in_owner = true

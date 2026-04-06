@@ -11,7 +11,6 @@ const GRID_SIZE = 32
 @onready var music: AudioStreamPlayer2D = $Audio/Music
 
 
-
 var display_width = 3500
 var display_height = 3000
 
