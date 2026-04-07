@@ -20,6 +20,7 @@ var lightImage = LightTexture.get_image()
 var light_offset = Vector2(LightTexture.get_width()/2, LightTexture.get_height()/2)
 
 func _ready():
+	super()
 	music.play()
 	var fog_image_width: int = int(display_width / GRID_SIZE)
 	var fog_image_height: int = int(display_height / GRID_SIZE)

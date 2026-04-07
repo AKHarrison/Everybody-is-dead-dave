@@ -13,7 +13,7 @@ func _ready() -> void:
 		player = scene_manager.player
 		add_child(player)
 		
-	position_player()
+	position_player.call_deferred()
 	
 func position_player() -> void:
 	for entrance in entrance_markers.get_children():

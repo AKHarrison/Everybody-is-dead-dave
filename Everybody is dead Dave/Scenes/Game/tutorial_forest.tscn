@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://decjx4n515pgt"]
+[gd_scene load_steps=10 format=4 uid="uid://decjx4n515pgt"]
 
 [ext_resource type="Texture2D" uid="uid://dblvqghoupwrf" path="res://Sprites/Tile flair - Copy.png" id="1_j1t1f"]
 [ext_resource type="PackedScene" uid="uid://44fri6d0ec86" path="res://Scenes/Environment/round_tree.tscn" id="3_5i6wp"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://dqy0spmucen2i" path="res://Scenes/Environment/Buildings/RuffTerrace1.tscn" id="6_ox82i"]
 [ext_resource type="PackedScene" uid="uid://qsk1atfa0qu6" path="res://Scenes/Environment/Buildings/NiceTerrace1.tscn" id="7_j732e"]
 [ext_resource type="Script" uid="uid://dh8s582n4k74x" path="res://Scripts/base_scene.gd" id="8_ox82i"]
-[ext_resource type="PackedScene" uid="uid://ce2hfwlha2m5u" path="res://Scenes/Game/scene_trigger.tscn" id="9_f7qxf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ox82i"]
 texture = ExtResource("1_j1t1f")
@@ -205,9 +204,6 @@ texture = ExtResource("1_j1t1f")
 [sub_resource type="TileSet" id="TileSet_j732e"]
 sources/0 = SubResource("TileSetAtlasSource_ox82i")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfhmy"]
-size = Vector2(65, 61)
-
 [node name="Tutorial Forest" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("8_ox82i")
@@ -364,18 +360,3 @@ scale = Vector2(0.79999995, 0.79999995)
 [node name="RuffTerraceWhiteFlip" parent="Border buildings" instance=ExtResource("5_t3mmh")]
 position = Vector2(-425.5999, -0.7999878)
 scale = Vector2(0.79999995, 0.79999995)
-
-[node name="EntranceMarkers" type="Node2D" parent="."]
-
-[node name="any" type="Marker2D" parent="EntranceMarkers"]
-position = Vector2(58, 85)
-
-[node name="SceneTrigger" parent="EntranceMarkers" instance=ExtResource("9_f7qxf")]
-position = Vector2(694, 223)
-collision_layer = 0
-collision_mask = 8
-connected_scene = "inside_dreggs"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EntranceMarkers/SceneTrigger"]
-position = Vector2(45, 15)
-shape = SubResource("RectangleShape2D_nfhmy")
