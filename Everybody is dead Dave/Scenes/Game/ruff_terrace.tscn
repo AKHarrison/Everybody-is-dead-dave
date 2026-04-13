@@ -23,7 +23,7 @@
 [ext_resource type="AudioStream" uid="uid://dm787dyrda08y" path="res://Audio/ES_Loud Powerful Blast.wav" id="19_wcyq4"]
 [ext_resource type="AudioStream" uid="uid://shkl2u3q5f5w" path="res://Audio/ES_Play Me Like That Video Game - Josef Bel Habib.mp3" id="20_y2n1n"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iyxn3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3ifq"]
 texture = ExtResource("4_hqmw1")
 0:0/0 = 0
 1:0/0 = 0
@@ -219,7 +219,7 @@ texture = ExtResource("4_hqmw1")
 [sub_resource type="TileSet" id="TileSet_76j5d"]
 physics_layer_0/collision_layer = 1
 physics_layer_1/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_iyxn3")
+sources/0 = SubResource("TileSetAtlasSource_b3ifq")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ip1y1"]
 blend_mode = 3
@@ -231,6 +231,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(17, 23, 1181, 18, 1174,
 agent_radius = 19.01
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_004sl"]
+size = Vector2(64.57123, 20)
 
 [node name="RuffTerrace" type="Node2D"]
 y_sort_enabled = true
@@ -370,7 +371,7 @@ collision_mask = 0
 position = Vector2(1208.9999, 329)
 
 [node name="RuffSide2" parent="NavigationRegion2D/Buildings" instance=ExtResource("18_8nf3k")]
-position = Vector2(717.00006, 628.00006)
+position = Vector2(721.00006, 628)
 
 [node name="RuffTerraceWhite3" parent="NavigationRegion2D/Buildings" instance=ExtResource("15_3lrvd")]
 position = Vector2(869, 238)
@@ -389,10 +390,10 @@ position = Vector2(21, 452)
 scale = Vector2(1.44765, 1.01521)
 collision_layer = 0
 collision_mask = 8
-connected_scene = "ya_wun"
+connected_scene = "dreggs"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EntranceMarkers/SceneTrigger2"]
-position = Vector2(372.32758, 115.24709)
+position = Vector2(733.0928, 218.67398)
 shape = SubResource("RectangleShape2D_004sl")
 
 [node name="MobSpawn" type="Node2D" parent="."]
