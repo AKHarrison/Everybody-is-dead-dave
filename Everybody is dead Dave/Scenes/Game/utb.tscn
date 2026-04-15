@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://0f4qqttfgmqj"]
+[gd_scene load_steps=28 format=4 uid="uid://0f4qqttfgmqj"]
 
 [ext_resource type="PackedScene" uid="uid://c530v30o431vv" path="res://Scenes/Environment/Ground.tscn" id="1_1pr2j"]
 [ext_resource type="Script" uid="uid://dhhnhcg5oxo6e" path="res://Scenes/Game/utb.gd" id="1_8d1gu"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bo3ek5j28jd2q" path="res://Scenes/Environment/Buildings/RuffTerrace1flip.tscn" id="10_2tx3r"]
 [ext_resource type="PackedScene" uid="uid://cy3jq046q6lq0" path="res://Scenes/Environment/Buildings/RuffTerrace2.tscn" id="11_i1fwa"]
 [ext_resource type="PackedScene" uid="uid://chr22mw0ktf1x" path="res://Scenes/Environment/Buildings/RuffTerrace2flip.tscn" id="12_eegpq"]
+[ext_resource type="Script" uid="uid://2cjkj7hnf5t0" path="res://Scripts/scene_trigger_random.gd" id="19_bd0l7"]
 [ext_resource type="PackedScene" uid="uid://44fri6d0ec86" path="res://Scenes/Environment/round_tree.tscn" id="23_7cllg"]
 [ext_resource type="PackedScene" uid="uid://05s1xok4crt" path="res://Scenes/Environment/point_tree.tscn" id="25_h7r1a"]
 [ext_resource type="PackedScene" uid="uid://f1v44uvq7x0a" path="res://Scenes/Environment/lamppost.tscn" id="26_8jjiu"]
@@ -741,7 +742,7 @@ position = Vector2(951, 424)
 position = Vector2(260, 332)
 collision_layer = 0
 collision_mask = 8
-connected_scene = "ruff_terrace"
+script = ExtResource("19_bd0l7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
 position = Vector2(495.75, 289)

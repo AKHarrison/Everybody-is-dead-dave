@@ -1,11 +1,10 @@
-[gd_scene load_steps=20 format=4 uid="uid://efp84o42fj53"]
+[gd_scene load_steps=19 format=4 uid="uid://efp84o42fj53"]
 
 [ext_resource type="Script" uid="uid://c35nefqxyb8w4" path="res://Scenes/Game/footy_pitches.gd" id="1_b4m64"]
 [ext_resource type="PackedScene" uid="uid://c530v30o431vv" path="res://Scenes/Environment/Ground.tscn" id="1_mt4vg"]
 [ext_resource type="TileSet" uid="uid://dbdwsd5g1yk24" path="res://Scenes/pathandtrees.tres" id="2_81ocu"]
 [ext_resource type="Texture2D" uid="uid://dblvqghoupwrf" path="res://Sprites/Tile flair - Copy.png" id="3_fs5yv"]
 [ext_resource type="Texture2D" uid="uid://c6q5sfndt1mcm" path="res://Sprites/Light.png" id="4_eamkr"]
-[ext_resource type="PackedScene" uid="uid://cxth7ibjroci6" path="res://Scenes/Player/player.tscn" id="6_b4m64"]
 [ext_resource type="PackedScene" uid="uid://t4qgbg444b64" path="res://Scenes/Environment/Buildings/Bounds.tscn" id="6_nkohn"]
 [ext_resource type="PackedScene" uid="uid://ce2hfwlha2m5u" path="res://Scenes/Game/scene_trigger.tscn" id="7_5hlci"]
 [ext_resource type="PackedScene" uid="uid://cisef30vd43pv" path="res://Scenes/Environment/Buildings/shelter.tscn" id="7_81ocu"]
@@ -222,8 +221,8 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Arr
 outlines = Array[PackedVector2Array]([PackedVector2Array(0, -45, 1270, -35, 1274, 763, -2, 760, 3, 301)])
 agent_radius = 19.01
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qsp1y"]
-size = Vector2(28, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eamkr"]
+size = Vector2(37, 24)
 
 [node name="FootyPitches" type="Node2D"]
 y_sort_enabled = true
@@ -254,9 +253,6 @@ centered = false
 unique_name_in_owner = true
 position = Vector2(651, 5)
 
-[node name="Player" parent="." instance=ExtResource("6_b4m64")]
-position = Vector2(785, 56)
-
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 y_sort_enabled = true
 position = Vector2(-11, 5)
@@ -265,7 +261,7 @@ navigation_polygon = SubResource("NavigationPolygon_8bus7")
 [node name="Buildings" type="Node2D" parent="NavigationRegion2D"]
 
 [node name="Node2D" parent="NavigationRegion2D/Buildings" instance=ExtResource("7_81ocu")]
-position = Vector2(1170, 632)
+position = Vector2(1160, 633)
 
 [node name="flair" type="Node2D" parent="NavigationRegion2D"]
 y_sort_enabled = true
@@ -427,18 +423,20 @@ position = Vector2(-14.145984, -45.183033)
 scale = Vector2(0.36730993, 0.4111973)
 
 [node name="EntranceMarkers" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="any" type="Marker2D" parent="EntranceMarkers"]
 position = Vector2(1219, 229)
 
 [node name="SceneTrigger2" parent="EntranceMarkers" instance=ExtResource("7_5hlci")]
+y_sort_enabled = true
 collision_layer = 0
 collision_mask = 8
 connected_scene = "ya_wun"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EntranceMarkers/SceneTrigger2"]
-position = Vector2(1154, 649)
-shape = SubResource("RectangleShape2D_qsp1y")
+position = Vector2(1151, 673)
+shape = SubResource("RectangleShape2D_eamkr")
 
 [node name="MobSpawn" type="Node2D" parent="."]
 y_sort_enabled = true

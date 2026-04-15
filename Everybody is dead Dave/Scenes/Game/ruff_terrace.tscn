@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://cjitmaij6ygjs"]
+[gd_scene load_steps=29 format=4 uid="uid://cjitmaij6ygjs"]
 
 [ext_resource type="Script" uid="uid://8bpinbelufpw" path="res://Scripts/ruff_terrace.gd" id="1_hood5"]
 [ext_resource type="PackedScene" uid="uid://c530v30o431vv" path="res://Scenes/Environment/Ground.tscn" id="1_uhhci"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cdjt6rcdb4dfi" path="res://Scenes/Environment/Buildings/RuffSide.tscn" id="18_8nf3k"]
 [ext_resource type="Script" uid="uid://csedo2hb4eukn" path="res://Scripts/mob_spawn.gd" id="18_espsv"]
 [ext_resource type="AudioStream" uid="uid://dm787dyrda08y" path="res://Audio/ES_Loud Powerful Blast.wav" id="19_wcyq4"]
+[ext_resource type="Script" uid="uid://2cjkj7hnf5t0" path="res://Scripts/scene_trigger_random.gd" id="20_hqmw1"]
 [ext_resource type="AudioStream" uid="uid://shkl2u3q5f5w" path="res://Audio/ES_Play Me Like That Video Game - Josef Bel Habib.mp3" id="20_y2n1n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3ifq"]
@@ -390,7 +391,7 @@ position = Vector2(21, 452)
 scale = Vector2(1.44765, 1.01521)
 collision_layer = 0
 collision_mask = 8
-connected_scene = "dreggs"
+script = ExtResource("20_hqmw1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EntranceMarkers/SceneTrigger2"]
 position = Vector2(733.0928, 218.67398)

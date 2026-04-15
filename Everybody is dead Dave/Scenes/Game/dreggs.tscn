@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bj5pmbukkok2w"]
+[gd_scene load_steps=29 format=4 uid="uid://bj5pmbukkok2w"]
 
 [ext_resource type="Script" uid="uid://kalltq4vy8fx" path="res://Scenes/Game/dreggs.gd" id="1_7i4nw"]
 [ext_resource type="PackedScene" uid="uid://c530v30o431vv" path="res://Scenes/Environment/Ground.tscn" id="1_mrmxn"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cy3jq046q6lq0" path="res://Scenes/Environment/Buildings/RuffTerrace2.tscn" id="17_v0koc"]
 [ext_resource type="PackedScene" uid="uid://bo3ek5j28jd2q" path="res://Scenes/Environment/Buildings/RuffTerrace1flip.tscn" id="18_atf2o"]
 [ext_resource type="PackedScene" uid="uid://dhfeih6agdo7f" path="res://Scenes/Environment/Buildings/shops.tscn" id="19_6xwvn"]
+[ext_resource type="Script" uid="uid://2cjkj7hnf5t0" path="res://Scripts/scene_trigger_random.gd" id="20_w4mv5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hyko4"]
 texture = ExtResource("4_7i4nw")
@@ -544,7 +545,7 @@ position = Vector2(955, 23)
 [node name="SceneTrigger2" parent="EntranceMarkers" instance=ExtResource("9_hwi6q")]
 collision_layer = 0
 collision_mask = 8
-connected_scene = "footy_pitches"
+script = ExtResource("20_w4mv5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EntranceMarkers/SceneTrigger2"]
 position = Vector2(-36.75, 312)

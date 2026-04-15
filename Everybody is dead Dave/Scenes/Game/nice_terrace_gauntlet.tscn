@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://dblvqghoupwrf" path="res://Sprites/Tile flair - Copy.png" id="4_55gjw"]
 [ext_resource type="Texture2D" uid="uid://c6q5sfndt1mcm" path="res://Sprites/Light.png" id="5_doq5e"]
 [ext_resource type="PackedScene" uid="uid://uvmaeo3d77ij" path="res://Scenes/Environment/traffic.tscn" id="6_paosm"]
-[ext_resource type="PackedScene" uid="uid://cxth7ibjroci6" path="res://Scenes/Player/player.tscn" id="6_vpmbd"]
 [ext_resource type="PackedScene" uid="uid://f1v44uvq7x0a" path="res://Scenes/Environment/lamppost.tscn" id="7_uh7u4"]
 [ext_resource type="PackedScene" uid="uid://bnlsoc4g6gaqn" path="res://Scenes/Environment/buffa_bin.tscn" id="8_kyodt"]
 [ext_resource type="PackedScene" uid="uid://44fri6d0ec86" path="res://Scenes/Environment/round_tree.tscn" id="9_b0spg"]
@@ -19,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://ce2hfwlha2m5u" path="res://Scenes/Game/scene_trigger.tscn" id="15_cgqb3"]
 [ext_resource type="Script" uid="uid://csedo2hb4eukn" path="res://Scripts/mob_spawn.gd" id="16_awv0s"]
 [ext_resource type="AudioStream" uid="uid://dm787dyrda08y" path="res://Audio/ES_Loud Powerful Blast.wav" id="17_7x7xh"]
+[ext_resource type="Script" uid="uid://2cjkj7hnf5t0" path="res://Scripts/scene_trigger_random.gd" id="18_55gjw"]
 [ext_resource type="AudioStream" uid="uid://shkl2u3q5f5w" path="res://Audio/ES_Play Me Like That Video Game - Josef Bel Habib.mp3" id="18_xngkx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e0emy"]
@@ -265,9 +265,6 @@ position = Vector2(-33, -39)
 texture = ExtResource("5_doq5e")
 centered = false
 
-[node name="Player" parent="." instance=ExtResource("6_vpmbd")]
-position = Vector2(595, 95)
-
 [node name="MobHome" type="Marker2D" parent="." groups=["home_point"]]
 unique_name_in_owner = true
 position = Vector2(759, 92)
@@ -370,7 +367,7 @@ position = Vector2(21, 452)
 scale = Vector2(1.44765, 1.01521)
 collision_layer = 0
 collision_mask = 8
-connected_scene = "dreggs"
+script = ExtResource("18_55gjw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EntranceMarkers/SceneTrigger2"]
 position = Vector2(785.4109, 139.87254)
