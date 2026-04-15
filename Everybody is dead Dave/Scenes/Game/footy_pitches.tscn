@@ -1,5 +1,6 @@
-[gd_scene load_steps=19 format=4 uid="uid://efp84o42fj53"]
+[gd_scene load_steps=20 format=4 uid="uid://efp84o42fj53"]
 
+[ext_resource type="Script" uid="uid://c35nefqxyb8w4" path="res://Scenes/Game/footy_pitches.gd" id="1_b4m64"]
 [ext_resource type="PackedScene" uid="uid://c530v30o431vv" path="res://Scenes/Environment/Ground.tscn" id="1_mt4vg"]
 [ext_resource type="TileSet" uid="uid://dbdwsd5g1yk24" path="res://Scenes/pathandtrees.tres" id="2_81ocu"]
 [ext_resource type="Texture2D" uid="uid://dblvqghoupwrf" path="res://Sprites/Tile flair - Copy.png" id="3_fs5yv"]
@@ -226,6 +227,7 @@ size = Vector2(28, 20)
 
 [node name="FootyPitches" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_b4m64")
 
 [node name="TileMaps" type="Node2D" parent="."]
 y_sort_enabled = true
