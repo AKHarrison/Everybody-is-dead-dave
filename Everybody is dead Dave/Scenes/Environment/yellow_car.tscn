@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyo4l31af4ckx"]
+
+[ext_resource type="Texture2D" uid="uid://cehtk62mud5wk" path="res://Sprites/yellow_car.PNG" id="1_hopjh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxy8s"]
+size = Vector2(23.5, 42.5)
+
+[node name="YellowCar" type="StaticBody2D"]
+scale = Vector2(1.5, 1.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, -0.75)
+shape = SubResource("RectangleShape2D_sxy8s")
+
+[node name="YellowCar" type="Sprite2D" parent="."]
+texture = ExtResource("1_hopjh")

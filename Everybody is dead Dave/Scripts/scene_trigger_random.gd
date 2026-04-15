@@ -6,6 +6,7 @@ var levels = [
 	"nice_terrace_gauntlet",
 	"nice_terrace_gauntlet_flip",
 	"ruff_terrace",
+	"dreggs",
 	]
 	
 

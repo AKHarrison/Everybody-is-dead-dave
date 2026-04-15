@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwbfk3dsb8ddb"]
+
+[ext_resource type="Texture2D" uid="uid://dv5cxfdi27lt4" path="res://Sprites/blue_car.PNG" id="1_nnrti"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2gm7q"]
+size = Vector2(26, 54)
+
+[node name="BlueCar" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_2gm7q")
+
+[node name="BlueCar" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_nnrti")
