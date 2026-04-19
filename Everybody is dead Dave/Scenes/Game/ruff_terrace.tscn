@@ -313,7 +313,7 @@ scale = Vector2(1.0603718, 1.0844779)
 
 [node name="WorldBounds" parent="NavigationRegion2D/WorldBounds" instance=ExtResource("12_dtovj")]
 position = Vector2(16, 57)
-scale = Vector2(0.3454949, 0.33015427)
+scale = Vector2(0.34886923, 0.34470078)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="NavigationRegion2D/WorldBounds"]
 position = Vector2(37, 80)
@@ -372,7 +372,7 @@ collision_mask = 0
 position = Vector2(1208.9999, 329)
 
 [node name="RuffSide2" parent="NavigationRegion2D/Buildings" instance=ExtResource("18_8nf3k")]
-position = Vector2(721.00006, 628)
+position = Vector2(676, 626)
 
 [node name="RuffTerraceWhite3" parent="NavigationRegion2D/Buildings" instance=ExtResource("15_3lrvd")]
 position = Vector2(869, 238)
@@ -394,7 +394,7 @@ collision_mask = 8
 script = ExtResource("20_hqmw1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EntranceMarkers/SceneTrigger2"]
-position = Vector2(733.0928, 218.67398)
+position = Vector2(728.07654, 212.76387)
 shape = SubResource("RectangleShape2D_004sl")
 
 [node name="MobSpawn" type="Node2D" parent="."]
