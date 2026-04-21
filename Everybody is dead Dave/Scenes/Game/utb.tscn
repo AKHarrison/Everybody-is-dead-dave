@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bo3ek5j28jd2q" path="res://Scenes/Environment/Buildings/RuffTerrace1flip.tscn" id="10_2tx3r"]
 [ext_resource type="PackedScene" uid="uid://cy3jq046q6lq0" path="res://Scenes/Environment/Buildings/RuffTerrace2.tscn" id="11_i1fwa"]
 [ext_resource type="PackedScene" uid="uid://chr22mw0ktf1x" path="res://Scenes/Environment/Buildings/RuffTerrace2flip.tscn" id="12_eegpq"]
-[ext_resource type="Script" uid="uid://2cjkj7hnf5t0" path="res://Scripts/scene_trigger_random.gd" id="19_bd0l7"]
+[ext_resource type="Script" uid="uid://b1ip4w2w40pgh" path="res://Scripts/screen_trigger_mgd.gd" id="19_bd0l7"]
 [ext_resource type="PackedScene" uid="uid://44fri6d0ec86" path="res://Scenes/Environment/round_tree.tscn" id="23_7cllg"]
 [ext_resource type="PackedScene" uid="uid://05s1xok4crt" path="res://Scenes/Environment/point_tree.tscn" id="25_h7r1a"]
 [ext_resource type="PackedScene" uid="uid://f1v44uvq7x0a" path="res://Scenes/Environment/lamppost.tscn" id="26_8jjiu"]
@@ -261,7 +261,7 @@ tile_set = SubResource("TileSet_1pbpm")
 
 [node name="Player" parent="." instance=ExtResource("1_ygwuu")]
 unique_name_in_owner = true
-position = Vector2(135, 188)
+position = Vector2(759, 447)
 collision_layer = 9
 
 [node name="Fog" type="Sprite2D" parent="."]

@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cdjt6rcdb4dfi" path="res://Scenes/Environment/Buildings/RuffSide.tscn" id="18_8nf3k"]
 [ext_resource type="Script" uid="uid://csedo2hb4eukn" path="res://Scripts/mob_spawn.gd" id="18_espsv"]
 [ext_resource type="AudioStream" uid="uid://dm787dyrda08y" path="res://Audio/ES_Loud Powerful Blast.wav" id="19_wcyq4"]
-[ext_resource type="Script" uid="uid://2cjkj7hnf5t0" path="res://Scripts/scene_trigger_random.gd" id="20_hqmw1"]
+[ext_resource type="Script" uid="uid://b1ip4w2w40pgh" path="res://Scripts/screen_trigger_mgd.gd" id="20_hqmw1"]
 [ext_resource type="AudioStream" uid="uid://shkl2u3q5f5w" path="res://Audio/ES_Play Me Like That Video Game - Josef Bel Habib.mp3" id="20_y2n1n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3ifq"]
@@ -232,7 +232,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(17, 23, 1181, 18, 1174,
 agent_radius = 19.01
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_004sl"]
-size = Vector2(64.57123, 20)
+size = Vector2(79.949066, 24.775269)
 
 [node name="RuffTerrace" type="Node2D"]
 y_sort_enabled = true
@@ -315,9 +315,6 @@ scale = Vector2(1.0603718, 1.0844779)
 position = Vector2(16, 57)
 scale = Vector2(0.34886923, 0.34470078)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="NavigationRegion2D/WorldBounds"]
-position = Vector2(37, 80)
-
 [node name="Buildings" type="Node2D" parent="NavigationRegion2D"]
 y_sort_enabled = true
 position = Vector2(-7, -13)
@@ -394,7 +391,7 @@ collision_mask = 8
 script = ExtResource("20_hqmw1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EntranceMarkers/SceneTrigger2"]
-position = Vector2(728.07654, 212.76387)
+position = Vector2(736.45624, 107.78458)
 shape = SubResource("RectangleShape2D_004sl")
 
 [node name="MobSpawn" type="Node2D" parent="."]
