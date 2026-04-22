@@ -5,6 +5,9 @@ var player: Player
 var scene_dir_path = "res://Scenes/Game/"
 var current_scene: Node
 
+var ruffT = false
+var niceTM = false
+
 func change_scene(from, to_scene_name: String) -> void:
 	player = from.player
 	player.get_parent().remove_child(player)

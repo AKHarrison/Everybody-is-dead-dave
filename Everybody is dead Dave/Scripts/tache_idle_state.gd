@@ -17,7 +17,6 @@ func _enter_state():
 	
 func home():
 	if actor.home == true and actor.hit == true:
-		print("home hit")  # Debugging
 		mob_state_machine.change_state(mob_home_state)
 		
 
