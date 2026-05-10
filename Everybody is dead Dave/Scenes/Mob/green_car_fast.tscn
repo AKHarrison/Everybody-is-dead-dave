@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://coson0hwwigjp"]
+
+[ext_resource type="Script" uid="uid://csk07fbnt04l" path="res://Scenes/Mob/car.gd" id="1_c6pqr"]
+[ext_resource type="Texture2D" uid="uid://dova5rol8ev4n" path="res://Sprites/green_car.PNG" id="2_c6pqr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27w60"]
+size = Vector2(23.999998, 50)
+
+[node name="GreenCarFast" type="CharacterBody2D"]
+rotation = -1.5707964
+script = ExtResource("1_c6pqr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.7683716e-07, 2.0843214e-14)
+shape = SubResource("RectangleShape2D_27w60")
+
+[node name="GreenCar" type="Sprite2D" parent="."]
+texture = ExtResource("2_c6pqr")

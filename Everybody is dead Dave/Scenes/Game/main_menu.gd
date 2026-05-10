@@ -4,6 +4,8 @@ extends Control
 
 func _ready():
 	music.play()
+	var hud = get_node("/root/HudManager")  # however you access your UI layer
+	hud.hide_hud()
 
 func _on_tutorial_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Game/start_screen.tscn")

@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://8vud41i0k3id"]
+[gd_scene load_steps=4 format=3 uid="uid://8vud41i0k3id"]
 
+[ext_resource type="Script" uid="uid://blwjpq5mlgmac" path="res://GUI/hud_manager.gd" id="1_4mlsq"]
 [ext_resource type="PackedScene" uid="uid://chax2rt7oshui" path="res://GUI/player_hud.tscn" id="1_apes5"]
 [ext_resource type="PackedScene" uid="uid://f3porybix481" path="res://Scenes/Game/pause_menu.tscn" id="2_4mlsq"]
 
-[node name="Hud Manager" type="CanvasLayer"]
+[node name="HudManager" type="CanvasLayer"]
+script = ExtResource("1_4mlsq")
 
 [node name="PlayerHud" parent="." instance=ExtResource("1_apes5")]
 

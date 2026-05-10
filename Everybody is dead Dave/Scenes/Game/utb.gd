@@ -22,6 +22,8 @@ var light_offset = Vector2(LightTexture.get_width()/2, LightTexture.get_height()
 
 func _ready():
 	music.play()
+	var hud = get_node("/root/HudManager")  # however you access your UI layer
+	hud.show_hud()
 	var fog_image_width: int = int(display_width / GRID_SIZE)
 	var fog_image_height: int = int(display_height / GRID_SIZE)
 	fogImage = Image.create(fog_image_width, fog_image_height, false, Image.FORMAT_RGBAH)

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwc8t7qwlknyh"]
+
+[ext_resource type="Texture2D" uid="uid://8jyi1i8iis12" path="res://Scenes/Mob/shop3.PNG" id="1_s7att"]
+[ext_resource type="Texture2D" uid="uid://ciarkl8kaop44" path="res://Scenes/Mob/shop1.PNG" id="2_4bn8a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ge6v3"]
+size = Vector2(323.0003, 189.00018)
+
+[node name="SmallShops2" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(82.5, 5.500002)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_ge6v3")
+
+[node name="Shop3" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_s7att")
+flip_h = true
+
+[node name="Shop6" type="Sprite2D" parent="."]
+position = Vector2(160, 2)
+scale = Vector2(2, 2)
+texture = ExtResource("2_4bn8a")
+flip_h = true

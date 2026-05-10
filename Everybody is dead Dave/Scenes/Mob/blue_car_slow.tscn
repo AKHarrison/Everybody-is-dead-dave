@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://wbljn8tbtrr6"]
+
+[ext_resource type="Script" uid="uid://csk07fbnt04l" path="res://Scenes/Mob/car.gd" id="1_lqqic"]
+[ext_resource type="Texture2D" uid="uid://dv5cxfdi27lt4" path="res://Sprites/blue_car.PNG" id="2_lqqic"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27w60"]
+size = Vector2(23.999998, 50)
+
+[node name="BlueCarSlow" type="CharacterBody2D"]
+rotation = -1.5707964
+script = ExtResource("1_lqqic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.7683716e-07, 2.0843214e-14)
+shape = SubResource("RectangleShape2D_27w60")
+
+[node name="BlueCar" type="Sprite2D" parent="."]
+texture = ExtResource("2_lqqic")

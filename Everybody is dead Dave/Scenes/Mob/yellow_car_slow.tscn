@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://br6qh7b7gwve3"]
+
+[ext_resource type="Script" uid="uid://csk07fbnt04l" path="res://Scenes/Mob/car.gd" id="1_llwj3"]
+[ext_resource type="Texture2D" uid="uid://cehtk62mud5wk" path="res://Sprites/yellow_car.PNG" id="2_llwj3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27w60"]
+size = Vector2(22, 38)
+
+[node name="YellowCarSlow" type="CharacterBody2D"]
+rotation = -1.5707964
+script = ExtResource("1_llwj3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.6292809e-07, -1)
+shape = SubResource("RectangleShape2D_27w60")
+
+[node name="YellowCar" type="Sprite2D" parent="."]
+texture = ExtResource("2_llwj3")
