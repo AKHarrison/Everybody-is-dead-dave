@@ -1,16 +1,10 @@
 extends Node2D
 
-const CAR_TYPES_SLOW = [
+const CAR_TYPES = [
 	preload("res://Scenes/Mob/blue_car_slow.tscn"),
 	preload("res://Scenes/Mob/green_car_slow.tscn"),
 	preload("res://Scenes/Mob/yellow_car_slow.tscn"),
 	preload("res://Scenes/Mob/red_car_slow.tscn")
-]
-const CAR_TYPES_FAST = [
-	preload("res://Scenes/Mob/red_car_fast.tscn"),
-	preload("res://Scenes/Mob/blue_car_fast.tscn"),
-	preload("res://Scenes/Mob/green_car_fast.tscn"),
-	preload("res://Scenes/Mob/yellow_car_fast.tscn")
 ]
 	
 
@@ -21,9 +15,10 @@ func spawn_car(spawn_point: Marker2D, car_pool: Array, delay: float, velocity: f
 	new_car.direction = direction
 	new_car.speed = velocity
 	add_child(new_car)
+	new_car.flip_sprite()
 
 func _on_timer_timeout():
-	spawn_car(%CarSpawn1, CAR_TYPES_SLOW, randf_range(0.05, 0.4), 300, Vector2.LEFT)
-	spawn_car(%CarSpawn2, CAR_TYPES_FAST, randf_range(0.05, 0.4), 500, Vector2.LEFT)
-	spawn_car(%CarSpawn3, CAR_TYPES_SLOW, randf_range(0.05, 0.4), 300, Vector2.RIGHT)
-	spawn_car(%CarSpawn4, CAR_TYPES_FAST, randf_range(0.05, 0.4), 500, Vector2.RIGHT)
+	spawn_car(%CarSpawn1, CAR_TYPES, randf_range(0.05, 0.4), 300, Vector2.LEFT)
+	spawn_car(%CarSpawn2, CAR_TYPES, randf_range(0.05, 0.4), 500, Vector2.LEFT)
+	spawn_car(%CarSpawn3, CAR_TYPES, randf_range(0.05, 0.4), 500, Vector2.RIGHT)
+	spawn_car(%CarSpawn4, CAR_TYPES, randf_range(0.05, 0.4), 300, Vector2.RIGHT)

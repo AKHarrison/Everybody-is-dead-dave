@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://c2oc3klfcc78t"]
+[gd_scene load_steps=21 format=4 uid="uid://c2oc3klfcc78t"]
 
 [ext_resource type="PackedScene" uid="uid://c530v30o431vv" path="res://Scenes/Environment/Ground.tscn" id="1_60e2g"]
 [ext_resource type="Script" uid="uid://d3qkbte3m2nh6" path="res://Scripts/dual_carriageway.gd" id="1_pun3t"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c6q5sfndt1mcm" path="res://Sprites/Light.png" id="5_uk5yw"]
 [ext_resource type="PackedScene" uid="uid://f1v44uvq7x0a" path="res://Scenes/Environment/lamppost.tscn" id="6_wtqx7"]
 [ext_resource type="PackedScene" uid="uid://44fri6d0ec86" path="res://Scenes/Environment/round_tree.tscn" id="7_ufvwm"]
+[ext_resource type="PackedScene" uid="uid://dqw2def24m4ht" path="res://bridge.tscn" id="10_pun3t"]
 [ext_resource type="PackedScene" uid="uid://ce2hfwlha2m5u" path="res://Scenes/Game/scene_trigger.tscn" id="16_1akrx"]
 [ext_resource type="Script" uid="uid://2cjkj7hnf5t0" path="res://Scripts/scene_trigger_random.gd" id="17_kkafp"]
 [ext_resource type="AudioStream" uid="uid://dm787dyrda08y" path="res://Audio/ES_Loud Powerful Blast.wav" id="19_einkk"]
@@ -215,6 +216,12 @@ sources/0 = SubResource("TileSetAtlasSource_yqfsx")
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6xg4x"]
 blend_mode = 3
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pun3t"]
+size = Vector2(46, 420)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0ntm"]
+size = Vector2(5, 421)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htbc8"]
 size = Vector2(17.96016, 64.176025)
 
@@ -239,6 +246,11 @@ position = Vector2(127, 8)
 tile_map_data = PackedByteArray("AAAWACIAAAACAAUAAAAXACAAAAACAAUAAABDACAAAAABAAYAAAANACEAAAABAAUAAAATACAAAAABAAUAAAAzACEAAAABAAUAAAA8ACIAAAABAAYAAAAHACIAAAABAAUAAAANACIAAAABAAUAAAAOACEAAAABAAYAAAAUACEAAAABAAYAAAAiACIAAAABAAUAAAAoACIAAAABAAUAAAAwACEAAAABAAUAAAA7ACAAAAABAAYAAAA=")
 tile_set = ExtResource("3_q7kjy")
 
+[node name="Bridge" type="TileMapLayer" parent="TileMaps/Roads"]
+z_index = 1
+tile_map_data = PackedByteArray("AABDABkAAAAAAAEAAABDABoAAAAAAAIAAABDABsAAAAAAAIAAABDABwAAAAAAAIAAABDAB0AAAAAAAIAAABDAB4AAAAAAAIAAABDAB8AAAAAAAIAAABDACAAAAAAAAIAAABDACEAAAAAAAIAAABDACIAAAAAAAIAAABDACMAAAAAAAIAAABDACQAAAAAAAIAAABDACUAAAAAAAIAAABDACYAAAAAAAIAAABDACcAAAAAAAIAAABDACgAAAAAAAIAAABDACkAAAAAAAIAAABDACoAAAAAAAIAAABDACsAAAAAAAIAAABDACwAAAAAAAIAAABDAC0AAAAAAAIAAABDAC4AAAAAAAIAAABDAC8AAAAAAAIAAABDADAAAAAAAAIAAABDADEAAAAAAAIAAABDADIAAAAAAAMAAABFABkAAAAFAAEAAABFABoAAAAFAAIAAABFABsAAAAFAAIAAABFABwAAAAFAAIAAABFAB0AAAAFAAIAAABFAB4AAAAFAAIAAABFAB8AAAAFAAIAAABFACAAAAAFAAIAAABFACEAAAAFAAIAAABFACIAAAAFAAIAAABFACMAAAAFAAIAAABFACQAAAAFAAIAAABFACUAAAAFAAIAAABFACYAAAAFAAIAAABFACcAAAAFAAIAAABFACgAAAAFAAIAAABFACkAAAAFAAIAAABFACoAAAAFAAIAAABFACsAAAAFAAIAAABFACwAAAAFAAIAAABFAC0AAAAFAAIAAABFAC4AAAAFAAIAAABFAC8AAAAFAAIAAABFADAAAAAFAAIAAABFADEAAAAFAAIAAABFADIAAAAFAAMAAABEABkAAAACAAIAAABEABoAAAACAAIAAABEABsAAAACAAIAAABEABwAAAACAAIAAABEAB0AAAACAAIAAABEAB4AAAACAAIAAABEAB8AAAACAAIAAABEACAAAAACAAIAAABEACEAAAACAAIAAABEACIAAAACAAIAAABEACMAAAACAAIAAABEACQAAAACAAIAAABEACUAAAACAAIAAABEACYAAAACAAIAAABEACcAAAACAAIAAABEACgAAAACAAIAAABEACkAAAACAAIAAABEACoAAAACAAIAAABEACsAAAACAAIAAABEACwAAAACAAIAAABEAC0AAAACAAIAAABEAC4AAAACAAIAAABEAC8AAAACAAIAAABEADAAAAACAAIAAABEADEAAAACAAIAAABEADIAAAACAAMAAAA=")
+tile_set = ExtResource("3_q7kjy")
+
 [node name="flair" type="TileMapLayer" parent="TileMaps"]
 position = Vector2(-6, 3)
 tile_set = SubResource("TileSet_bthh5")
@@ -252,7 +264,8 @@ texture = ExtResource("5_uk5yw")
 centered = false
 
 [node name="Player" parent="." instance=ExtResource("21_7ue4x")]
-position = Vector2(484, 54)
+position = Vector2(548, 183)
+collision_layer = 5
 
 [node name="flair" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -283,6 +296,29 @@ position = Vector2(0, 354)
 [node name="CarSpawn4" type="Marker2D" parent="Cars"]
 unique_name_in_owner = true
 position = Vector2(0, 400)
+
+[node name="Bridge" type="Node2D" parent="."]
+position = Vector2(979.5, 312.5)
+
+[node name="BridgeFloor" parent="Bridge" instance=ExtResource("10_pun3t")]
+position = Vector2(7.5, -200.5)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bridge/BridgeFloor"]
+position = Vector2(17, 200)
+shape = SubResource("RectangleShape2D_pun3t")
+
+[node name="Area2D" type="Area2D" parent="Bridge"]
+z_index = 1
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bridge/Area2D"]
+shape = SubResource("RectangleShape2D_y0ntm")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Bridge/Area2D"]
+position = Vector2(47.5, -3.5)
+shape = SubResource("RectangleShape2D_y0ntm")
 
 [node name="EntranceMarkers" type="Node2D" parent="."]
 position = Vector2(2, -1)
@@ -319,4 +355,5 @@ max_distance = 5000.0
 wait_time = 0.7
 autostart = true
 
+[connection signal="body_exited" from="Bridge/BridgeFloor" to="Bridge/BridgeFloor" method="_on_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

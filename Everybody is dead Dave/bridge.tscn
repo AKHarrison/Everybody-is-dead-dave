@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqw2def24m4ht"]
+
+[ext_resource type="Script" uid="uid://nn2wm1l1ibj8" path="res://Scenes/Game/bridge.gd" id="1_an2wo"]
+
+[node name="Bridge" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_an2wo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

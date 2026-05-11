@@ -6,9 +6,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27w60"]
 size = Vector2(22, 38)
 
-[node name="YellowCarSlow" type="CharacterBody2D"]
+[node name="YellowCarSlow" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
 rotation = -1.5707964
 script = ExtResource("1_llwj3")
+sprite = NodePath("YellowCar")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4.6292809e-07, -1)
