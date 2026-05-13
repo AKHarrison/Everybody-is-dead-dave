@@ -22,3 +22,7 @@ func _on_timer_timeout():
 	spawn_car(%CarSpawn2, CAR_TYPES, randf_range(0.05, 0.4), 500, Vector2.LEFT)
 	spawn_car(%CarSpawn3, CAR_TYPES, randf_range(0.05, 0.4), 500, Vector2.RIGHT)
 	spawn_car(%CarSpawn4, CAR_TYPES, randf_range(0.05, 0.4), 300, Vector2.RIGHT)
+
+
+func _on_bridge_floor_exit_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
