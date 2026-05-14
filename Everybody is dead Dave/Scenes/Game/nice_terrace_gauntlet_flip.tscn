@@ -293,19 +293,55 @@ y_sort_enabled = false
 position = Vector2(1145, 173)
 
 [node name="BuffaBin10" parent="NavigationRegion2D/flair" instance=ExtResource("9_o2cxi")]
-position = Vector2(702, 274)
+position = Vector2(853, 272)
 
 [node name="BuffaBin11" parent="NavigationRegion2D/flair" instance=ExtResource("9_o2cxi")]
-position = Vector2(678, 274)
+position = Vector2(829, 272)
 
 [node name="BuffaBin12" parent="NavigationRegion2D/flair" instance=ExtResource("9_o2cxi")]
-position = Vector2(655, 273)
+position = Vector2(806, 271)
 
 [node name="round_tree" parent="NavigationRegion2D/flair" instance=ExtResource("10_edb6s")]
-position = Vector2(138, 241)
+position = Vector2(131, 211)
 
 [node name="PointTree" parent="NavigationRegion2D/flair" instance=ExtResource("11_lk21b")]
-position = Vector2(721, 270)
+position = Vector2(-34, 62)
+
+[node name="PointTree2" parent="NavigationRegion2D/flair" instance=ExtResource("11_lk21b")]
+position = Vector2(-34, 100)
+
+[node name="PointTree3" parent="NavigationRegion2D/flair" instance=ExtResource("11_lk21b")]
+position = Vector2(-34, 150)
+
+[node name="PointTree4" parent="NavigationRegion2D/flair" instance=ExtResource("11_lk21b")]
+position = Vector2(-34, 200)
+
+[node name="PointTree5" parent="NavigationRegion2D/flair" instance=ExtResource("11_lk21b")]
+position = Vector2(-34, 250)
+
+[node name="PointTree6" parent="NavigationRegion2D/flair" instance=ExtResource("11_lk21b")]
+position = Vector2(-34, 300)
+
+[node name="PointTree7" parent="NavigationRegion2D/flair" instance=ExtResource("11_lk21b")]
+position = Vector2(-34, 350)
+
+[node name="PointTree8" parent="NavigationRegion2D/flair" instance=ExtResource("11_lk21b")]
+position = Vector2(-35, 409)
+
+[node name="PointTree9" parent="NavigationRegion2D/flair" instance=ExtResource("11_lk21b")]
+position = Vector2(-35, 459)
+
+[node name="PointTree10" parent="NavigationRegion2D/flair" instance=ExtResource("11_lk21b")]
+position = Vector2(-35, 509)
+
+[node name="PointTree11" parent="NavigationRegion2D/flair" instance=ExtResource("11_lk21b")]
+position = Vector2(-35, 559)
+
+[node name="PointTree12" parent="NavigationRegion2D/flair" instance=ExtResource("11_lk21b")]
+position = Vector2(-35, 609)
+
+[node name="PointTree13" parent="NavigationRegion2D/flair" instance=ExtResource("11_lk21b")]
+position = Vector2(-35, 659)
 
 [node name="WorldBounds" type="Node2D" parent="NavigationRegion2D"]
 position = Vector2(-34, -34)
