@@ -295,11 +295,11 @@ position = Vector2(1300, 272)
 
 [node name="CarSpawn3" type="Marker2D" parent="Cars"]
 unique_name_in_owner = true
-position = Vector2(0, 354)
+position = Vector2(-8, 349)
 
 [node name="CarSpawn4" type="Marker2D" parent="Cars"]
 unique_name_in_owner = true
-position = Vector2(0, 400)
+position = Vector2(-6, 398)
 
 [node name="flair" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -307,59 +307,59 @@ position = Vector2(-6, 5)
 
 [node name="Lamppost18" parent="flair" instance=ExtResource("6_wtqx7")]
 y_sort_enabled = false
-position = Vector2(1177, 173)
+position = Vector2(1172, 160)
 
 [node name="Lamppost19" parent="flair" instance=ExtResource("6_wtqx7")]
 y_sort_enabled = false
-position = Vector2(969, 170)
+position = Vector2(964, 157)
 
 [node name="Lamppost20" parent="flair" instance=ExtResource("6_wtqx7")]
 y_sort_enabled = false
-position = Vector2(782, 172)
+position = Vector2(777, 159)
 
 [node name="Lamppost21" parent="flair" instance=ExtResource("6_wtqx7")]
 y_sort_enabled = false
-position = Vector2(582, 170)
+position = Vector2(577, 157)
 
 [node name="Lamppost22" parent="flair" instance=ExtResource("6_wtqx7")]
 y_sort_enabled = false
-position = Vector2(382, 170)
+position = Vector2(377, 157)
 
 [node name="Lamppost23" parent="flair" instance=ExtResource("6_wtqx7")]
 y_sort_enabled = false
-position = Vector2(-18, 170)
+position = Vector2(-23, 157)
 
 [node name="Lamppost24" parent="flair" instance=ExtResource("6_wtqx7")]
 y_sort_enabled = false
-position = Vector2(182, 170)
+position = Vector2(177, 157)
 
 [node name="Lamppost25" parent="flair" instance=ExtResource("6_wtqx7")]
 y_sort_enabled = false
-position = Vector2(1175, 412)
+position = Vector2(1175, 433)
 
 [node name="Lamppost26" parent="flair" instance=ExtResource("6_wtqx7")]
 y_sort_enabled = false
-position = Vector2(966, 410)
+position = Vector2(966, 431)
 
 [node name="Lamppost27" parent="flair" instance=ExtResource("6_wtqx7")]
 y_sort_enabled = false
-position = Vector2(780, 411)
+position = Vector2(780, 432)
 
 [node name="Lamppost28" parent="flair" instance=ExtResource("6_wtqx7")]
 y_sort_enabled = false
-position = Vector2(580, 409)
+position = Vector2(580, 430)
 
 [node name="Lamppost29" parent="flair" instance=ExtResource("6_wtqx7")]
 y_sort_enabled = false
-position = Vector2(380, 409)
+position = Vector2(380, 430)
 
 [node name="Lamppost30" parent="flair" instance=ExtResource("6_wtqx7")]
 y_sort_enabled = false
-position = Vector2(-20, 409)
+position = Vector2(-20, 430)
 
 [node name="Lamppost31" parent="flair" instance=ExtResource("6_wtqx7")]
 y_sort_enabled = false
-position = Vector2(180, 409)
+position = Vector2(180, 430)
 
 [node name="round_tree" parent="flair" instance=ExtResource("7_ufvwm")]
 position = Vector2(184, 633)

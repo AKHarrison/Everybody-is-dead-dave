@@ -9,6 +9,7 @@ size = Vector2(22, 38)
 [node name="YellowCarSlow" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
 y_sort_enabled = true
 rotation = -1.5707964
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_llwj3")
 sprite = NodePath("YellowCar")
 
