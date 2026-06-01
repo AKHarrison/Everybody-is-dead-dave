@@ -6,14 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27w60"]
 size = Vector2(22, 38)
 
-[node name="YellowCarSlow" type="PathFollow2D" node_paths=PackedStringArray("sprite")]
+[node name="YellowCarSlow" type="PathFollow2D"]
 y_sort_enabled = true
 rotation = -1.5707964
 scale = Vector2(1.5, 1.5)
-rotates = false
-loop = false
 script = ExtResource("1_llwj3")
-sprite = NodePath("StaticBody2D/YellowCar")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

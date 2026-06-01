@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://br6qh7b7gwve3"]
 
-[ext_resource type="Script" uid="uid://ba4dxav8s4klx" path="res://Scenes/Mob/DC_drive_path.gd" id="1_llwj3"]
+[ext_resource type="Script" uid="uid://csk07fbnt04l" path="res://Scenes/Mob/car.gd" id="1_llwj3"]
 [ext_resource type="Texture2D" uid="uid://cehtk62mud5wk" path="res://Sprites/yellow_car.PNG" id="2_llwj3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27w60"]
@@ -10,8 +10,6 @@ size = Vector2(22, 38)
 y_sort_enabled = true
 rotation = -1.5707964
 scale = Vector2(1.5, 1.5)
-rotates = false
-loop = false
 script = ExtResource("1_llwj3")
 sprite = NodePath("StaticBody2D/YellowCar")
 
