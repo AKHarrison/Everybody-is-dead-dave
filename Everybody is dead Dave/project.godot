@@ -23,10 +23,10 @@ boot_splash/minimum_display_time=5000
 Global="*res://Scripts/global.gd"
 LevelManager="*res://Scripts/GlobalLevelManager.gd"
 GlobalTimer="*res://Scripts/global_timer.gd"
-scene_manager="*res://Scripts/scene_manager.gd"
 MobManager="*res://Scripts/mob_manager.gd"
 WinManager="*res://Scenes/Game/win_manager.gd"
 HudManager="*res://GUI/hud_manager.tscn"
+scene_manager="*res://Scenes/Game/scene_manager.tscn"
 
 [display]
 
