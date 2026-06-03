@@ -33,8 +33,8 @@ jobs:
       - name: 🎨 Check GDScript formatting (non-destructive)
         run: |
           echo "Checking GDScript formatting..."
-          find "Everybody is dead Dave" -name "*.gd" | \
-            xargs gdformat --check 2>&1 || \
+          find "Everybody is dead Dave" -name "*.gd" -print0 | \
+            xargs -0 gdformat --check 2>&1 || \
             (echo "⚠️  Some files need formatting — run 'gdformat <file>' locally to fix" && exit 1)
 
       - name: 🔬 Lint all GDScript files
