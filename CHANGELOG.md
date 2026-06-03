@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here.Entries are auto-generated from [Conventional Commits](https://www.conventionalcommits.org/) on every merge to `master`.
 
+## 🏷️ [0.0.1] — 2026-06-03
+
+### 🐛 Bug Fixes
+- Remove pip cache from setup-python to fix CI failure ([`061ef2b`](https://github.com/AKHarrison/Everybody-is-dead-dave/commit/061ef2b9b7f7daafe1cac4abb14c021a529d7aa2))
+
 ## 🏷️ [0.0.0] — 2026-04-02
 
 ### 👷 CI/CD
@@ -11,6 +16,6 @@ All notable changes to this project are documented here.Entries are auto-generat
 - Add CLAUDE.md project context for Claude Code sessions ([`f288a5d`](https://github.com/AKHarrison/Everybody-is-dead-dave/commit/f288a5d191e96a6aefc2f7327f591a92644c4cdc))- Add Geordie flavour to contributing section ([`f207a44`](https://github.com/AKHarrison/Everybody-is-dead-dave/commit/f207a4485a439f06c3b1eb365bc9cef3caa20fb7))- Add comprehensive README with setup guide and badges ([`e7a33e6`](https://github.com/AKHarrison/Everybody-is-dead-dave/commit/e7a33e64010f802d1873c77e7527371266560f63))
 
 ### 🔧 Chores
-- Ignore .worktrees directory ([`31ff47d`](https://github.com/AKHarrison/Everybody-is-dead-dave/commit/31ff47d552c5c2de7ced0044c1df92665cf5e269))
+- Update CHANGELOG.md [skip ci] ([`fbe2780`](https://github.com/AKHarrison/Everybody-is-dead-dave/commit/fbe278051dbaca8cf0602844ca0a3879d74459d7))- Ignore .worktrees directory ([`31ff47d`](https://github.com/AKHarrison/Everybody-is-dead-dave/commit/31ff47d552c5c2de7ced0044c1df92665cf5e269))
 
 
