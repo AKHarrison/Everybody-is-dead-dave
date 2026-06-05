@@ -2,43 +2,38 @@ class_name GeordieBase extends CharacterBody2D
 
 var max_speed: float = 100.0
 var low_speed: float = 20.0
-var	acceleration: float = 10.0
+var acceleration: float = 10.0
 var hit: bool = false
 var home: bool = false
-
-
-@onready var player: CharacterBody2D = null
-
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
 @onready var msm: MobStateMachine = $MobStateMachine
 @onready var mob_wander_state: GeordieWanderState = $MobStateMachine/MobWanderState as GeordieWanderState
 @onready var mob_chase_state: GeordieChaseState = $MobStateMachine/MobChaseState as GeordieChaseState
 @onready var mob_idle_state: GeordieIdleState = $MobStateMachine/MobIdleState as GeordieIdleState
 @onready var mob_home_state: GeordieHomeState = $MobStateMachine/MobHomeState as GeordieHomeState
+var player: CharacterBody2D = null
 
 func _ready():
 	player = get_tree().get_first_node_in_group("player")
 	mob_wander_state.found_player.connect(msm.change_state.bind(mob_chase_state))
 	mob_chase_state.lost_player.connect(msm.change_state.bind(mob_wander_state))
 	mob_chase_state.insult_hit.connect(msm.change_state.bind(mob_idle_state))
-	
+
 func set_idle():
 	hit = true
-	
+
 func send_home():
 	home = true
 
 func can_see_player() -> bool:
 	if not is_instance_valid(player) or not player.is_inside_tree():
 		return false
-	
-	# Update raycast to point at player (relative position)
 	ray_cast_2d.target_position = to_local(player.global_position)
 	ray_cast_2d.force_raycast_update()
-	
-	# Check if raycast hits the player specifically
 	return ray_cast_2d.is_colliding() and ray_cast_2d.get_collider() == player
-		
+
 func _physics_process(delta):
-	if is_instance_valid(player) and player.is_inside_tree():
-		ray_cast_2d.target_position = ray_cast_2d.to_local(player.global_position)
+	if not is_instance_valid(player) or not player.is_inside_tree():
+		player = get_tree().get_first_node_in_group("player")
+		return
+	ray_cast_2d.target_position = to_local(player.global_position)

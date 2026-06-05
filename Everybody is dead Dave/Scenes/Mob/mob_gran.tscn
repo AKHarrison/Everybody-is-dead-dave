@@ -145,10 +145,9 @@ script = ExtResource("3_3eyfy")
 actor = NodePath("../..")
 vision_cast = NodePath("../../RayCast2D")
 
-[node name="MobChaseState" type="Node" parent="MobStateMachine" node_paths=PackedStringArray("actor", "vision_cast")]
+[node name="MobChaseState" type="Node" parent="MobStateMachine" node_paths=PackedStringArray("actor")]
 script = ExtResource("4_dcux6")
 actor = NodePath("../..")
-vision_cast = NodePath("../../RayCast2D")
 
 [node name="MobIdleState" type="Node" parent="MobStateMachine" node_paths=PackedStringArray("actor")]
 script = ExtResource("5_g168d")

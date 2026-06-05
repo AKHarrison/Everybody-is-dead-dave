@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://bsrfmyfbcf5u8"]
+[gd_scene load_steps=20 format=4 uid="uid://bsrfmyfbcf5u8"]
 
 [ext_resource type="PackedScene" uid="uid://c530v30o431vv" path="res://Scenes/Environment/Ground.tscn" id="1_mlbbk"]
 [ext_resource type="Script" uid="uid://kalltq4vy8fx" path="res://Scenes/Game/dreggs.gd" id="1_vmu0c"]
@@ -13,7 +13,6 @@
 [ext_resource type="Script" uid="uid://csedo2hb4eukn" path="res://Scripts/mob_spawn.gd" id="10_mj4hc"]
 [ext_resource type="AudioStream" uid="uid://dm787dyrda08y" path="res://Audio/ES_Loud Powerful Blast.wav" id="11_afclg"]
 [ext_resource type="PackedScene" uid="uid://dlg3tp61sdtpd" path="res://Scenes/Mob/mob_geordie.tscn" id="11_gj8wk"]
-[ext_resource type="PackedScene" uid="uid://c803cv0f27fj5" path="res://Scenes/Mob/mob_gran.tscn" id="12_b3ixd"]
 [ext_resource type="AudioStream" uid="uid://shkl2u3q5f5w" path="res://Audio/ES_Play Me Like That Video Game - Josef Bel Habib.mp3" id="12_ov0om"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ask3i"]
@@ -711,17 +710,8 @@ position = Vector2(250, 302)
 [node name="MobGeordie2" parent="Mobs" instance=ExtResource("11_gj8wk")]
 position = Vector2(376, 301)
 
-[node name="MobGeordie3" parent="Mobs" instance=ExtResource("11_gj8wk")]
-position = Vector2(311, 246)
-
 [node name="MobGeordie4" parent="Mobs" instance=ExtResource("11_gj8wk")]
 position = Vector2(411, 179)
-
-[node name="MobGeordie5" parent="Mobs" instance=ExtResource("11_gj8wk")]
-position = Vector2(188, 174)
-
-[node name="MobGeordie6" parent="Mobs" instance=ExtResource("11_gj8wk")]
-position = Vector2(299, 183)
 
 [node name="MobGeordie7" parent="Mobs" instance=ExtResource("11_gj8wk")]
 position = Vector2(302, 114)
@@ -732,17 +722,11 @@ position = Vector2(647, 279)
 [node name="MobGeordie9" parent="Mobs" instance=ExtResource("11_gj8wk")]
 position = Vector2(773, 278)
 
-[node name="MobGeordie10" parent="Mobs" instance=ExtResource("11_gj8wk")]
-position = Vector2(708, 223)
-
 [node name="MobGeordie11" parent="Mobs" instance=ExtResource("11_gj8wk")]
 position = Vector2(808, 156)
 
 [node name="MobGeordie12" parent="Mobs" instance=ExtResource("11_gj8wk")]
 position = Vector2(585, 151)
-
-[node name="MobGeordie13" parent="Mobs" instance=ExtResource("11_gj8wk")]
-position = Vector2(696, 160)
 
 [node name="MobGeordie14" parent="Mobs" instance=ExtResource("11_gj8wk")]
 position = Vector2(699, 91)
@@ -762,9 +746,6 @@ position = Vector2(815, 420)
 [node name="MobGeordie19" parent="Mobs" instance=ExtResource("11_gj8wk")]
 position = Vector2(592, 415)
 
-[node name="MobGeordie20" parent="Mobs" instance=ExtResource("11_gj8wk")]
-position = Vector2(703, 424)
-
 [node name="MobGeordie21" parent="Mobs" instance=ExtResource("11_gj8wk")]
 position = Vector2(706, 355)
 
@@ -774,23 +755,11 @@ position = Vector2(250, 564)
 [node name="MobGeordie23" parent="Mobs" instance=ExtResource("11_gj8wk")]
 position = Vector2(376, 563)
 
-[node name="MobGeordie24" parent="Mobs" instance=ExtResource("11_gj8wk")]
-position = Vector2(311, 508)
-
 [node name="MobGeordie25" parent="Mobs" instance=ExtResource("11_gj8wk")]
 position = Vector2(411, 441)
 
-[node name="MobGeordie26" parent="Mobs" instance=ExtResource("11_gj8wk")]
-position = Vector2(188, 436)
-
-[node name="MobGeordie27" parent="Mobs" instance=ExtResource("11_gj8wk")]
-position = Vector2(299, 445)
-
 [node name="MobGeordie28" parent="Mobs" instance=ExtResource("11_gj8wk")]
 position = Vector2(302, 376)
-
-[node name="MobGran" parent="." instance=ExtResource("12_b3ixd")]
-position = Vector2(191, 308)
 
 [node name="MobSpawn" type="Node2D" parent="."]
 y_sort_enabled = true

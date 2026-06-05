@@ -40,5 +40,7 @@ func can_see_player() -> bool:
 	return ray_cast_2d.is_colliding() and ray_cast_2d.get_collider() == player
 		
 func _physics_process(delta):
-	if is_instance_valid(player) and player.is_inside_tree():
-		ray_cast_2d.target_position = ray_cast_2d.to_local(player.global_position)
+	if not is_instance_valid(player) or not player.is_inside_tree():
+		player = get_tree().get_first_node_in_group("player")
+		return
+	ray_cast_2d.target_position = to_local(player.global_position)
