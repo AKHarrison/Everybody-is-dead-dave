@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dxk6ong6taofj"]
 
-[ext_resource type="Script" path="res://numpty.gd" id="1_rtdnd"]
+[ext_resource type="Script" uid="uid://col7tqvigvg4s" path="res://numpty.gd" id="1_rtdnd"]
 [ext_resource type="Theme" uid="uid://lbd43rig8hm5" path="res://Sprites/insult.tres" id="2_pi63y"]
 [ext_resource type="AudioStream" uid="uid://ptr087wlsue6" path="res://Scenes/Player/Numpty.wav" id="3_sfhor"]
 

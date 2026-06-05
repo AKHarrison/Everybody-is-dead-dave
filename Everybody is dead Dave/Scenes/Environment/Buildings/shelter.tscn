@@ -3,12 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://b3nbmr6t2bqmq" path="res://Sprites/shelter.PNG" id="1_1r4a0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8dihs"]
-size = Vector2(120, 92)
+size = Vector2(106, 78)
 
 [node name="Node2D" type="StaticBody2D"]
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -7)
 shape = SubResource("RectangleShape2D_8dihs")
 
 [node name="Img0157" type="Sprite2D" parent="."]

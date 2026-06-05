@@ -12,8 +12,8 @@ func _physics_process(delta):
 	const SPEED = 300
 	const RANGE = 150
 	
-	var direction = Vector2.UP.rotated(rotation)
-	position += direction * SPEED * delta
+	var direction = Vector2.RIGHT.rotated(global_rotation)
+	global_position += direction * SPEED * delta
 	
 	
 	travelled_distance += SPEED * delta

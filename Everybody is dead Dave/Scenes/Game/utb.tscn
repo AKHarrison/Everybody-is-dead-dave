@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://0f4qqttfgmqj"]
+[gd_scene load_steps=28 format=4 uid="uid://0f4qqttfgmqj"]
 
 [ext_resource type="PackedScene" uid="uid://c530v30o431vv" path="res://Scenes/Environment/Ground.tscn" id="1_1pr2j"]
 [ext_resource type="Script" uid="uid://dhhnhcg5oxo6e" path="res://Scenes/Game/utb.gd" id="1_8d1gu"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bo3ek5j28jd2q" path="res://Scenes/Environment/Buildings/RuffTerrace1flip.tscn" id="10_2tx3r"]
 [ext_resource type="PackedScene" uid="uid://cy3jq046q6lq0" path="res://Scenes/Environment/Buildings/RuffTerrace2.tscn" id="11_i1fwa"]
 [ext_resource type="PackedScene" uid="uid://chr22mw0ktf1x" path="res://Scenes/Environment/Buildings/RuffTerrace2flip.tscn" id="12_eegpq"]
+[ext_resource type="PackedScene" uid="uid://c803cv0f27fj5" path="res://Scenes/Mob/mob_gran.tscn" id="22_bd0l7"]
 [ext_resource type="PackedScene" uid="uid://44fri6d0ec86" path="res://Scenes/Environment/round_tree.tscn" id="23_7cllg"]
 [ext_resource type="PackedScene" uid="uid://05s1xok4crt" path="res://Scenes/Environment/point_tree.tscn" id="25_h7r1a"]
 [ext_resource type="PackedScene" uid="uid://f1v44uvq7x0a" path="res://Scenes/Environment/lamppost.tscn" id="26_8jjiu"]
@@ -230,7 +231,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(17, 23, 1181, 18, 1174,
 agent_radius = 19.01
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ng85"]
-size = Vector2(66.5, 34)
+size = Vector2(66.5, 11)
 
 [node name="UTB" type="Node2D"]
 y_sort_enabled = true
@@ -260,9 +261,10 @@ tile_set = SubResource("TileSet_1pbpm")
 
 [node name="Player" parent="." instance=ExtResource("1_ygwuu")]
 unique_name_in_owner = true
-position = Vector2(759, 491)
+position = Vector2(708, 409)
 
 [node name="Fog" type="Sprite2D" parent="."]
+visible = false
 z_index = 4
 texture_filter = 4
 material = SubResource("CanvasItemMaterial_gu44a")
@@ -740,10 +742,10 @@ position = Vector2(951, 424)
 position = Vector2(260, 332)
 collision_layer = 0
 collision_mask = 8
-connected_scene = "dual_carriageway"
+connected_scene = "dreggs"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
-position = Vector2(495.75, 289)
+position = Vector2(499, 285)
 shape = SubResource("RectangleShape2D_6ng85")
 
 [node name="MobSpawn" type="Node2D" parent="."]
@@ -770,5 +772,8 @@ volume_db = -9.079
 pitch_scale = 0.93
 autoplay = true
 max_distance = 5000.0
+
+[node name="MobGran" parent="." instance=ExtResource("22_bd0l7")]
+position = Vector2(263, 255)
 
 [connection signal="timeout" from="MobSpawn/Timer" to="MobSpawn" method="_on_timer_timeout"]

@@ -15,6 +15,11 @@ func _ready():
 
 	
 func _process(_delta):
+	#var input_x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	#var input_y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	#direction = Vector2(input_x, input_y).normalized()
+	
+	
 	var input_x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	var input_y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	
@@ -27,7 +32,7 @@ func _process(_delta):
 		direction.y = input_y
 	else:
 		direction = Vector2.ZERO
-	
+	#
 func _physics_process(_delta):	
 
 	move_and_slide()
